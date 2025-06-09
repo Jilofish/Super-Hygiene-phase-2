@@ -1,9 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
 public class FoodSortingManager : MonoBehaviour
 {
     public Transform foodItemsParent;
     public GameObject proceedButton;
+    public Image praiseImage;
 
     private List<FoodDragHandler> foodItems = new List<FoodDragHandler>();
 
@@ -35,6 +38,7 @@ public class FoodSortingManager : MonoBehaviour
 
         // If all food items are sorted, show the proceed button
         proceedButton.SetActive(true);
+        praiseImage.gameObject.SetActive(true);
     }
 
     public void OnProceedButtonClicked()

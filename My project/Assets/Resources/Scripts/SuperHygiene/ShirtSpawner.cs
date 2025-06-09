@@ -23,7 +23,7 @@ public class ShirtSpawner : MonoBehaviour
 
     private int currentShirtIndex = 0;
     private GameObject activeShirt;
-
+    public Image praiseImage;
 
 
    public void SpawnNextShirt()
@@ -47,6 +47,7 @@ public class ShirtSpawner : MonoBehaviour
         {
             Debug.Log("All shirts completed!");
             continueButton.gameObject.SetActive(true);
+            praiseImage.gameObject.SetActive(true);
             return;
         }
 

@@ -7,6 +7,7 @@ public class TrashManager : MonoBehaviour
     public GameObject[] trashPrefabs;
     public Transform[] trashSlots;   
     public Button proceedButton;
+    public Image praiseImage;
     private int trashCleaned = 0;
     private int totalTrash = 6;
     public GameManager gameManager;
@@ -74,6 +75,7 @@ public class TrashManager : MonoBehaviour
         if (trashCleaned >= totalTrash)
         {
             proceedButton.gameObject.SetActive(true);
+            praiseImage.gameObject.SetActive(true);
         }
     }
     public void ClearTrashFromSlots()
