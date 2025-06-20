@@ -66,9 +66,8 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Use the new Input System position (works for both mouse and touch)
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(inputPosition.x, inputPosition.y, 1f));
-        worldPosition.z = 0f; // Flatten to UI plane
+        worldPosition.z = 0f; 
 
         transform.position = worldPosition;
 
@@ -84,7 +83,7 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         foreach (var result in results)
         {
-            if (result.gameObject == gameObject) continue; // Skip self
+            if (result.gameObject == gameObject) continue;
 
             Debug.Log($"🔎 Raycast hit: {result.gameObject.name} | Tag: {result.gameObject.tag}");
 

@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Biodegradable
-  - Nonbiodegradable
-  - Recyclable
-  - Healthy
-  - Unhealthy
+  - TrashBin
+  - ToyBox
+  - Toy
+  - Trash
   layers:
   - Default
   - TransparentFX

@@ -102,12 +102,12 @@ public partial class @ShirtControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Swipe"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""e1101714-523a-4004-a527-b17cceb14684"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
