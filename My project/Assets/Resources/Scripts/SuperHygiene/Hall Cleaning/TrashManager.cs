@@ -45,8 +45,7 @@ public class TrashManager : MonoBehaviour
             GameObject obj = Instantiate(prefab, trashSlots[i].position, Quaternion.identity, trashSlots[i]);
             obj.GetComponent<TrashSorter>().enabled = false;
             obj.GetComponent<TrashTapHandler>().enabled = true;
-            // Set the tag of the instantiated object here to ensure it's correctly assigned
-            obj.tag = data.category.ToString(); // Assign the tag based on trash category
+            obj.tag = data.category.ToString();
             Debug.Log($"Spawned trash with tag: {obj.tag}");
 
             // Handle the TrashTapHandler and other components

@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class FoodDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Canvas canvas;
-    public string correctCategory; // "Go", "Glow", or "Grow"
+    public string correctCategory;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public Vector3 originalPosition;
