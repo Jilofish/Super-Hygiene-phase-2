@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plastic-bag_0: 5269079045665866870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

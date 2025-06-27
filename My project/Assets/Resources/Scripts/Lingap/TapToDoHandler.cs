@@ -60,7 +60,6 @@ public class TapToDoHandler : MonoBehaviour
         {
             TaskManager.Instance.IncrementTask(taskID);
         }
-
-        Destroy(gameObject); // remove object after tapping, just like drag drop
+        Destroy(gameObject);
     }
 }

@@ -15,11 +15,11 @@ MonoBehaviour:
   areaID: Area_1
   tasks:
   - taskID: clean_trash
-    description: Clean Trash
-    goalCount: 3
+    description: Pulutin ang kalat at itapon ito sa basurahan.
+    goalCount: 2
   - taskID: wipe_dirt
-    description: Punasan ang
-    goalCount: 5
-  - taskID: sort_toys
-    description: Sort the toys
+    description: Punasan ang alikabok at mga dumi sa sahig, bintana at sopa.
     goalCount: 4
+  - taskID: sort_toys
+    description: Ilagay sa tamang lagayan ang mga laruan.
+    goalCount: 1

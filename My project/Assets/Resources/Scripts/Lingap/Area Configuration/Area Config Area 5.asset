@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaID: Area_5
   tasks:
-  - taskID: clean_trash
-    description: Clean Trash
+  - taskID: fold_clothes
+    description: Tupiin ang damit.
     goalCount: 1
-  - taskID: sort_toys
-    description: Sort the toys
-    goalCount: 2
+  - taskID: collect_toys
+    description: Itabi ang mga laruan.
+    goalCount: 3
+  - taskID: fix_bed
+    description: Ang unan at kumot ay ayusin.
+    goalCount: 3

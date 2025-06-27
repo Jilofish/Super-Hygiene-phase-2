@@ -149,9 +149,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 84
-        height: 79
+        y: 0
+        width: 200
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,55 +166,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: trash-3_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 64
-        width: 190
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0b7366ef54efcb40800000000000000
-      internalID: 5462835973562006287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: trash-3_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 103
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65dfc0e8a87e22270800000000000000
-      internalID: 8224390451806666070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 92e55e262305d2645b042207e46e46dd
     internalID: 0
     vertices: []
     indices: 
@@ -223,7 +179,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      trash-3_0: 65820087458754417
+      trash-3_1: 5462835973562006287
+      trash-3_2: 8224390451806666070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

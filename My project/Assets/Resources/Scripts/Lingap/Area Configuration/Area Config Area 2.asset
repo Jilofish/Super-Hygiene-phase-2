@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaID: Area_2
   tasks:
-  - taskID: wipe_dirt
-    description: Dont Clean the trash
-    goalCount: 8
+  - taskID: arrange_chair
+    description: Ayusin ang upuan.
+    goalCount: 1
+  - taskID: wipe_water
+    description: Punasan ang natapon na tubig at gatas.
+    goalCount: 2
+  - taskID: clean_utensils
+    description: Pagsama-samahin ang mga plato, baso at kutsyara.
+    goalCount: 5

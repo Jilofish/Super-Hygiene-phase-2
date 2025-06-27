@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaID: Area_6
   tasks:
-  - taskID: wipe_dirt
-    description: Sort the toys
-    goalCount: 8
+  - taskID: sweep_trash
+    description: Magwalis
+    goalCount: 3
+  - taskID: clean_garbage
+    description: Itapon ang basura sa tamang lagayan
+    goalCount: 2
+  - taskID: pick_toys
+    description: Ayusin ang laruan
+    goalCount: 1
