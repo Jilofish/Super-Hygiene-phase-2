@@ -1977,6 +1977,18 @@ MonoBehaviour:
   - targetObject: {fileID: 1987721888}
     audioClip: {fileID: 8300000, guid: 5a101c981bc21bb4b858d2f725144214, type: 3}
     hasPlayed: 0
+  - targetObject: {fileID: 873674139}
+    audioClip: {fileID: 8300000, guid: 81d8bfc2ba691094f8695249f21c6362, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 940057797}
+    audioClip: {fileID: 8300000, guid: 82b1d19b1e14ea54c93944fd073dcdba, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 1238493629}
+    audioClip: {fileID: 8300000, guid: e3f4bc53fb25bda4dbcade27dd5c3bd2, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 75213228}
+    audioClip: {fileID: 8300000, guid: 20a00a5562d2ff24da40a080ff6cfb3a, type: 3}
+    hasPlayed: 0
 --- !u!1 &157718354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,7 +3471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &315249669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9039,7 +9051,7 @@ MonoBehaviour:
   m_text: TARA!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e70003ca75afb5a42ae9b47c9a59784c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2663289290347654213, guid: e70003ca75afb5a42ae9b47c9a59784c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
