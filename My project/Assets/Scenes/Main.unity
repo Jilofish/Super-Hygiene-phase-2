@@ -1006,6 +1006,7 @@ RectTransform:
   - {fileID: 2095796422}
   - {fileID: 313906332}
   - {fileID: 32443899}
+  - {fileID: 154388704}
   - {fileID: 109180703}
   - {fileID: 287160029}
   - {fileID: 2004375767}
@@ -1879,6 +1880,61 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &154388703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154388704}
+  - component: {fileID: 154388705}
+  m_Layer: 5
+  m_Name: CutsceneAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &154388704
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154388703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72073785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &154388705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154388703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21d61f321bfeb741b489d38ad9e2b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggers:
+  - targetObject: {fileID: 726204586}
+    audioClip: {fileID: 8300000, guid: bdc1973328cad7f4581c3c2560e221e8, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 52082685}
+    audioClip: {fileID: 8300000, guid: bdc1973328cad7f4581c3c2560e221e8, type: 3}
+    hasPlayed: 0
 --- !u!1 &157718354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &287160029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18711,7 +18767,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6faac25a31c5f1e419bb1c51c815afb1, type: 3}
   m_Resource: {fileID: 8300000, guid: 6faac25a31c5f1e419bb1c51c815afb1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
