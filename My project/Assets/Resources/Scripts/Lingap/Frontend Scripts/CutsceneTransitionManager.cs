@@ -3,117 +3,143 @@ using UnityEngine.UI;
 
 public class CutsceneTransitionManager : MonoBehaviour
 {
-    [Header("Area Loader Reference")]
-    [SerializeField] private AreaLoader areaLoader; // Assign in inspector
     [Header("Panels")]
-    [SerializeField] private GameObject levelCutscenePanel;
     [SerializeField] private GameObject startCutscenePanel;
     [SerializeField] private GameObject endingCutscenePanel;
 
-    [Header("Start Cutscene Image")]
-    [SerializeField] private Image startCutsceneImage;
+    [Header("Cutscene GameObjects (Preloaded in Scene)")]
+    [SerializeField] private GameObject[] startCutscene1Objects;
+    [SerializeField] private GameObject[] startCutscene2Objects;
+    [SerializeField] private GameObject[] endingCutsceneObjects;
 
-    [Header("Ending Cutscene Button (with Image component)")]
-    [SerializeField] private Button endingCutsceneButton;
+    [Header("Backgrounds (Optional)")]
+    [SerializeField] private GameObject[] levelBackgroundObjects;
 
-    [Header("Cutscene Sprites Per Level")]
-    [SerializeField] private Image levelBackgroundImage; 
-    [SerializeField] private Sprite[] levelCutsceneSprites;    // Optional
-    [SerializeField] private Sprite[] startCutscene1Sprites;   // First scene per level
-    [SerializeField] private Sprite[] startCutscene2Sprites;   // Second scene per level
-    [SerializeField] private Sprite[] endingCutsceneSprites;   // One per level
-
-    [Header("Task Entry Points Per Level")]
-    [SerializeField] private GameObject[] taskEntryPoints;     // Activate the task logic per level
+    [Header("Task Areas")]
+    [SerializeField] private GameObject[] taskEntryPoints;
 
     private int currentLevelIndex = -1;
     private int currentStartSceneIndex = 0;
 
-    // Called from intro button's OnClick
-    public void OpenLevelCutscene()
-    {
-        levelCutscenePanel.SetActive(true);
-    }
+    private GameObject activeStartCutscene;
+    private GameObject activeEndingCutscene;
+    private GameObject activeBackground;
 
-    // Called from AreaButton's OnClick (e.g., Level 1 button: OnLevelSelected(0))
+    // Called when player selects a level
     public void OnLevelSelected(int index)
     {
         currentLevelIndex = index;
         currentStartSceneIndex = 0;
 
-        // Set the level background
-        if (levelBackgroundImage != null && index >= 0 && index < levelCutsceneSprites.Length)
-        {
-            levelBackgroundImage.sprite = levelCutsceneSprites[index];
-            Debug.Log($"Set background to Level {index + 1}");
-        }
+        startCutscenePanel.SetActive(true);
+        ClearStartCutscene();
 
-        // Show start cutscene 1
-        if (startCutscenePanel != null && startCutsceneImage != null)
+        SetBackground(index);
+
+        // Show StartCutscene 1
+        if (index >= 0 && index < startCutscene1Objects.Length)
         {
-            startCutscenePanel.SetActive(true);
-            startCutsceneImage.sprite = startCutscene1Sprites[index];
+            activeStartCutscene = startCutscene1Objects[index];
+            activeStartCutscene.SetActive(true);
+            Debug.Log($"Showing Start Cutscene 1 for Level {index + 1}");
         }
     }
 
-
-    // Called from invisible button(s) in StartCutscenePanel
+    // Clicked on StartCutscene GameObject (button)
     public void OnNextStartCutscene()
     {
         if (currentStartSceneIndex == 0)
         {
             currentStartSceneIndex = 1;
-            startCutsceneImage.sprite = startCutscene2Sprites[currentLevelIndex];
-            Debug.Log($"Showing START cutscene 2 for Level {currentLevelIndex + 1}");
+            ClearStartCutscene();
+
+            if (currentLevelIndex >= 0 && currentLevelIndex < startCutscene2Objects.Length)
+            {
+                activeStartCutscene = startCutscene2Objects[currentLevelIndex];
+                activeStartCutscene.SetActive(true);
+                Debug.Log($"Showing Start Cutscene 2 for Level {currentLevelIndex + 1}");
+            }
         }
         else
         {
+            // End of cutscene → show Area
+            ClearStartCutscene();
             startCutscenePanel.SetActive(false);
 
-            // Call LoadArea AFTER second cutscene
-            areaLoader.LoadArea(currentLevelIndex);
-            Debug.Log($"Triggered LoadArea({currentLevelIndex}) after start cutscene.");
+            if (currentLevelIndex >= 0 && currentLevelIndex < taskEntryPoints.Length)
+            {
+                taskEntryPoints[currentLevelIndex].SetActive(true);
+                Debug.Log($"Activated Area_{currentLevelIndex + 1}");
+            }
         }
     }
-
 
     public void PlayEndingCutscene()
     {
         endingCutscenePanel.SetActive(true);
+        ClearEndingCutscene();
 
-        if (currentLevelIndex >= 0 && currentLevelIndex < endingCutsceneSprites.Length)
-            endingCutsceneButton.image.sprite = endingCutsceneSprites[currentLevelIndex];
+        if (currentLevelIndex >= 0 && currentLevelIndex < endingCutsceneObjects.Length)
+        {
+            activeEndingCutscene = endingCutsceneObjects[currentLevelIndex];
+            activeEndingCutscene.SetActive(true);
+            Debug.Log($"Showing Ending Cutscene for Level {currentLevelIndex + 1}");
+        }
     }
 
     public void LoadNextLevelCutscene()
     {
         int nextLevel = currentLevelIndex + 1;
 
-        if (nextLevel < startCutscene1Sprites.Length)
+        ClearEndingCutscene();
+        endingCutscenePanel.SetActive(false);
+
+        if (nextLevel < startCutscene1Objects.Length)
         {
             currentLevelIndex = nextLevel;
             currentStartSceneIndex = 0;
 
-            // Update background
-            if (levelBackgroundImage != null && nextLevel < levelCutsceneSprites.Length)
-            {
-                levelBackgroundImage.sprite = levelCutsceneSprites[nextLevel];
-                Debug.Log($"Updated background to Level {nextLevel + 1}");
-            }
+            startCutscenePanel.SetActive(true);
+            ClearStartCutscene();
+            SetBackground(nextLevel);
 
-            // Start the next level's StartCutscene
-            endingCutscenePanel.SetActive(false);
-            startCutsceneImage.sprite = startCutscene1Sprites[nextLevel];
-
-            Debug.Log($"Loaded StartCutscene 1 for Level {nextLevel + 1}");
+            activeStartCutscene = startCutscene1Objects[nextLevel];
+            activeStartCutscene.SetActive(true);
+            Debug.Log($"Loaded Start Cutscene 1 for Level {nextLevel + 1}");
         }
         else
         {
-            // No more levels
-            endingCutscenePanel.SetActive(false);
             Debug.Log("All levels completed!");
         }
     }
 
+    private void ClearStartCutscene()
+    {
+        if (activeStartCutscene != null)
+        {
+            activeStartCutscene.SetActive(false);
+            activeStartCutscene = null;
+        }
+    }
 
+    private void ClearEndingCutscene()
+    {
+        if (activeEndingCutscene != null)
+        {
+            activeEndingCutscene.SetActive(false);
+            activeEndingCutscene = null;
+        }
+    }
+
+    public void SetBackground(int levelIndex)
+    {
+        if (activeBackground != null)
+            activeBackground.SetActive(false);
+
+        if (levelIndex >= 0 && levelIndex < levelBackgroundObjects.Length)
+        {
+            activeBackground = levelBackgroundObjects[levelIndex];
+            activeBackground.SetActive(true);
+        }
+    }
 }
