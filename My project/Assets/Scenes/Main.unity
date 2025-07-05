@@ -1978,6 +1978,9 @@ MonoBehaviour:
   - targetObject: {fileID: 75213228}
     audioClip: {fileID: 8300000, guid: 20a00a5562d2ff24da40a080ff6cfb3a, type: 3}
     hasPlayed: 0
+  - targetObject: {fileID: 1109828929}
+    audioClip: {fileID: 8300000, guid: c7c97362062b12a489f5ff212b119cbc, type: 3}
+    hasPlayed: 0
 --- !u!1 &157718354
 GameObject:
   m_ObjectHideFlags: 0
@@ -8125,7 +8128,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1477144813553692681, guid: 2cbe41670f92d51479bb86f20e1119fd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cbe41670f92d51479bb86f20e1119fd, type: 3}
@@ -19114,7 +19118,7 @@ MonoBehaviour:
   - {fileID: 390927726}
   - {fileID: 1607294572}
   fadeDuration: 1
-  holdDuration: 2
+  holdDuration: 8
   slideshowContainer: {fileID: 1109828929}
   sceneChanger: {fileID: 1766405862}
   nextSceneName: Title
@@ -19822,7 +19826,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6faac25a31c5f1e419bb1c51c815afb1, type: 3}
   m_Resource: {fileID: 8300000, guid: 6faac25a31c5f1e419bb1c51c815afb1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
