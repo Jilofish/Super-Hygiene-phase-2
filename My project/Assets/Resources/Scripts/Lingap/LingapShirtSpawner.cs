@@ -27,7 +27,6 @@ public class LingapShirtSpawner : MonoBehaviour
 
    public void SpawnNextShirt()
     {
-        // Move the last active shirt aside
         if (activeShirt != null)
         {
             ShirtFolding lastLogic = activeShirt.GetComponent<ShirtFolding>();
@@ -94,6 +93,7 @@ public class LingapShirtSpawner : MonoBehaviour
     }
     public void ResetShirtStack()
     {
+        Debug.Log("Resetting shirt stack...");
         // Reset counters
         stackedShirtCount = 0;
         currentShirtIndex = 0;
