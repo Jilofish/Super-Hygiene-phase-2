@@ -22,6 +22,12 @@ public class CutsceneSlideshow : MonoBehaviour
         slides[0].gameObject.SetActive(true);
     }
 
+void Start()
+{
+    InitiateSlides();
+}
+
+
     public void InitiateSlides()
     {
         StartCoroutine(PlaySlideshow());
