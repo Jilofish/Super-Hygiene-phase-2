@@ -6,7 +6,6 @@ public class ShirtFoldManager : MonoBehaviour
 {
     public GameObject Area;
     public GameObject ShirtSpawn;
-    public GameObject ShirtSpawner;
 
     [SerializeField] private string taskID;
 
@@ -64,9 +63,7 @@ public class ShirtFoldManager : MonoBehaviour
     void DoAction()
     {
         Area.SetActive(false);
-        LingapShirtSpawner spawner = ShirtSpawner.GetComponent<LingapShirtSpawner>();
 
-        spawner.ResetShirtStack();
         ShirtSpawn.SetActive(true);
     }
     public void FoldingComplete()

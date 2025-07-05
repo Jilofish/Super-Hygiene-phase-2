@@ -27,6 +27,7 @@ public class LingapShirtSpawner : MonoBehaviour
 
    public void SpawnNextShirt()
     {
+        // Move the last active shirt aside
         if (activeShirt != null)
         {
             ShirtFolding lastLogic = activeShirt.GetComponent<ShirtFolding>();

@@ -3523,6 +3523,7 @@ RectTransform:
   - {fileID: 943807940}
   - {fileID: 82591946}
   - {fileID: 1644527610}
+  - {fileID: 1654783375}
   m_Father: {fileID: 72073785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4988,7 +4989,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Area: {fileID: 113631769}
   ShirtSpawn: {fileID: 313906331}
-  ShirtSpawner: {fileID: 943807939}
   taskID: fold_clothes
 --- !u!4 &472529651 stripped
 Transform:
@@ -10361,7 +10361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0006078d1dc75d4e9f4caf9a636a796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shirtPrefab: {fileID: 1932888322363631068, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+  shirtPrefab: {fileID: 1654783371}
   spawnParent: {fileID: 313906332}
   shirtColors:
   - {r: 0.9716981, g: 0, b: 0, a: 0}
@@ -17789,6 +17789,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654251391}
   m_CullTransparentMesh: 1
+--- !u!1 &1654783371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1932888322363631068, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+  m_PrefabInstance: {fileID: 1663886632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1654783375 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+  m_PrefabInstance: {fileID: 1663886632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1655232447
 GameObject:
   m_ObjectHideFlags: 0
@@ -17830,6 +17840,103 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1663886632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 313906332}
+    m_Modifications:
+    - target: {fileID: 1932888322363631068, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_Name
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 528.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1580
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272371134716264026, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04c0380cd37cd0042b545079e01f2dd7, type: 3}
 --- !u!4 &1666260509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3563396456695362938, guid: 231f5494325e898479f2e313f2aae48f, type: 3}
@@ -17965,10 +18072,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 310935482}
+      - m_Target: {fileID: 1446919338}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 943807941}
+        m_TargetAssemblyTypeName: LingapShirtSpawner, Assembly-CSharp
+        m_MethodName: ResetShirtStack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
