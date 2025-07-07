@@ -94,6 +94,7 @@ public class LingapShirtSpawner : MonoBehaviour
     }
     public void ResetShirtStack()
     {
+        Debug.Log("Resetting shirt stack...");
         // Reset counters
         stackedShirtCount = 0;
         currentShirtIndex = 0;
