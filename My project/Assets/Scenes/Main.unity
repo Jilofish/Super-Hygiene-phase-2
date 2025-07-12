@@ -1996,6 +1996,15 @@ MonoBehaviour:
   - targetObject: {fileID: 882652185}
     audioClip: {fileID: 8300000, guid: 276ff014fd8db5448a441bf714491652, type: 3}
     hasPlayed: 0
+  - targetObject: {fileID: 934891548}
+    audioClip: {fileID: 8300000, guid: 302b33a31694ade45bcdbf40edfb17f4, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 1943115983}
+    audioClip: {fileID: 8300000, guid: 00a91ba2150af50439360cf930fcbd23, type: 3}
+    hasPlayed: 0
+  - targetObject: {fileID: 980919896}
+    audioClip: {fileID: 8300000, guid: 11aa599b748296b4cbc4b5776c01271b, type: 3}
+    hasPlayed: 0
 --- !u!1 &157718354
 GameObject:
   m_ObjectHideFlags: 0
