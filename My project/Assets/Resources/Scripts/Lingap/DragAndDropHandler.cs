@@ -22,11 +22,21 @@ public class DragAndDropHandler : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
-        HandleMouse();
-#else
-        HandleTouch();
-#endif
+    // Prefer touch if available
+        if (Touchscreen.current != null && 
+            (Touchscreen.current.primaryTouch.press.isPressed ||
+            Touchscreen.current.primaryTouch.press.wasPressedThisFrame ||
+            Touchscreen.current.primaryTouch.press.wasReleasedThisFrame))
+        {
+            HandleTouch();
+        }
+        else if (Mouse.current != null &&
+                (Mouse.current.leftButton.wasPressedThisFrame ||
+                Mouse.current.leftButton.isPressed ||
+                Mouse.current.leftButton.wasReleasedThisFrame))
+        {
+            HandleMouse();
+        }
     }
 
     void HandleMouse()
@@ -111,7 +121,8 @@ public class DragAndDropHandler : MonoBehaviour
     }
     bool IsValidDropTarget(GameObject target)
     {
-        return (CompareTag("Toy") && target.CompareTag("ToyBox")) ||
+        return (CompareTag("Toy") && target.CompareTag("ToyBox")) || 
+                (CompareTag("Clothes") && target.CompareTag("ClothesBin")) ||
                (CompareTag("Trash") && target.CompareTag("TrashBin"));
     }
 }

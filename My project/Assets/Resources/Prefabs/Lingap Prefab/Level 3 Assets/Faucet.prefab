@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 847422745680140577}
   - component: {fileID: 2025074357751500553}
   - component: {fileID: 3992552226301452805}
-  - component: {fileID: 7180159122179713111}
   m_Layer: 0
   m_Name: Faucet
   m_TagString: Untagged
@@ -135,16 +134,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.46, y: 3.0759377}
   m_EdgeRadius: 0
---- !u!114 &7180159122179713111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3814368840697816730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskID: off_water

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1600745405250533047}
   - component: {fileID: 36927837264656527}
   - component: {fileID: 4541637725637379179}
-  - component: {fileID: 9130563852676249579}
+  - component: {fileID: -6322147698050313268}
   m_Layer: 0
   m_Name: Plastic Bag 1
   m_TagString: Untagged
@@ -170,7 +170,7 @@ PolygonCollider2D:
       - {x: 0.35, y: -0.91499996}
       - {x: 0.57, y: -0.885}
   m_UseDelaunayMesh: 0
---- !u!114 &9130563852676249579
+--- !u!114 &-6322147698050313268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4974323551996256204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: pick_up_trash

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2208149427683289860}
   - component: {fileID: 3639060455806649284}
   - component: {fileID: 142511740729050588}
-  - component: {fileID: 7214120699735823145}
+  - component: {fileID: -6986289812121019996}
   m_Layer: 0
   m_Name: Candy Packet
   m_TagString: Untagged
@@ -171,7 +171,7 @@ PolygonCollider2D:
       - {x: -0.17999999, y: -0.39999998}
       - {x: -0.17, y: -0.5}
   m_UseDelaunayMesh: 0
---- !u!114 &7214120699735823145
+--- !u!114 &-6986289812121019996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7834787189364312947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: pick_up_trash

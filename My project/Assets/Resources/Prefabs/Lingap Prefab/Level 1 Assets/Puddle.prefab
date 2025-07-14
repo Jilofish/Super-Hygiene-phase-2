@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1014195938268235667}
   - component: {fileID: 4309207303057861557}
-  - component: {fileID: -1388828006437341010}
-  - component: {fileID: -9137255088054927411}
+  - component: {fileID: 612212500770297869}
+  - component: {fileID: -5537165548970997862}
   m_Layer: 0
   m_Name: Puddle
   m_TagString: Untagged
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-1388828006437341010
-CircleCollider2D:
+--- !u!61 &612212500770297869
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,8 +124,18 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 9.37269
---- !u!114 &-9137255088054927411
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11.49, y: 3.48}
+    newSize: {x: 18.745382, y: 15.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 11.49, y: 3.48}
+  m_EdgeRadius: 0
+--- !u!114 &-5537165548970997862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

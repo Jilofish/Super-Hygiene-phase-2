@@ -22,4 +22,4 @@ MonoBehaviour:
     goalCount: 4
   - taskID: sort_toys
     description: Ilagay sa tamang lagayan ang mga laruan.
-    goalCount: 1
+    goalCount: 3

@@ -8,6 +8,8 @@ TagManager:
   - ToyBox
   - Toy
   - Trash
+  - Clothes
+  - ClothesBin
   layers:
   - Default
   - TransparentFX

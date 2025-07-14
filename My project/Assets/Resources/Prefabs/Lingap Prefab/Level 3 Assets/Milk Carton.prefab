@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3286985194647409750}
   - component: {fileID: 6150820390398782893}
   - component: {fileID: 4473064722076940506}
-  - component: {fileID: 7856478051217032865}
+  - component: {fileID: -823768614870041624}
   m_Layer: 0
   m_Name: Milk Carton
   m_TagString: Untagged
@@ -164,7 +164,7 @@ PolygonCollider2D:
       - {x: 0.68, y: -0.36499998}
       - {x: 0.90999997, y: -0.325}
   m_UseDelaunayMesh: 0
---- !u!114 &7856478051217032865
+--- !u!114 &-823768614870041624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6978090070591334496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: pick_up_trash

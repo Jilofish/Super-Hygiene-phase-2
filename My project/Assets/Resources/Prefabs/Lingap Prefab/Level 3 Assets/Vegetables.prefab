@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5091103499245905679}
   - component: {fileID: 5516617095499417207}
   - component: {fileID: 6634369352569381844}
-  - component: {fileID: 2533011026666360502}
+  - component: {fileID: -8073247384567632515}
   m_Layer: 0
   m_Name: Vegetables
   m_TagString: Untagged
@@ -196,7 +196,7 @@ PolygonCollider2D:
       - {x: 0.78999996, y: -0.32}
       - {x: 0.77, y: -0.29999998}
   m_UseDelaunayMesh: 0
---- !u!114 &2533011026666360502
+--- !u!114 &-8073247384567632515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3471132694711992188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: pick_up_trash

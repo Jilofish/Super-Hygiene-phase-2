@@ -1,10 +1,34 @@
 fileFormatVersion: 2
-guid: d02da7629770d2744b4464a88e2a029f
+guid: b7d1423389129144bb4e631c05aa45c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3811558932780910723
-    second: PROCEED-BUTTON_0
+      213: -9192452773635617995
+    second: Faucet Handle_0
+  - first:
+      213: 7226510550503082553
+    second: Faucet Handle_1
+  - first:
+      213: -4460596675868723190
+    second: Faucet Handle_2
+  - first:
+      213: 1846950940041156838
+    second: Faucet Handle_3
+  - first:
+      213: 3245504222358622462
+    second: Faucet Handle_4
+  - first:
+      213: -4470636921636921506
+    second: Faucet Handle_5
+  - first:
+      213: 6380246616627261529
+    second: Faucet Handle_6
+  - first:
+      213: 7858920709831394177
+    second: Faucet Handle_7
+  - first:
+      213: -3668916572898298276
+    second: Faucet Handle_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,66 +120,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PROCEED-BUTTON_0
+      name: Faucet Handle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 641
+        x: 101
+        y: 210
+        width: 289
+        height: 274
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3888fd4a7a065e430800000000000000
-      internalID: 3811558932780910723
+      spriteID: 53b05e4f7e8dd6080800000000000000
+      internalID: -9192452773635617995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faucet Handle_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 371
+        width: 151
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a4958de09b94460800000000000000
+      internalID: 7226510550503082553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faucet Handle_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 212
+        width: 270
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e81aba2810b1a910800000000000000
+      internalID: 1846950940041156838
       vertices: []
       indices: 
       edges: []
@@ -164,7 +193,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3a5c4e9f826752e43ac8da8dd8ddb0c5
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +203,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PROCEED-BUTTON_0: 3811558932780910723
+      Faucet Handle_0: -9192452773635617995
+      Faucet Handle_1: 7226510550503082553
+      Faucet Handle_3: 1846950940041156838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
