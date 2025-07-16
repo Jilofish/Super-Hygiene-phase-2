@@ -189,6 +189,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -909,7 +948,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Toys Images_0: 194549252235953119
+      Toys Images_1: 5249976294030050678
+      Toys Images_10: 3031340073021271259
+      Toys Images_11: 184571107651964779
+      Toys Images_12: 165717105281348061
+      Toys Images_13: -6024948847957358994
+      Toys Images_14: 4334884476029382459
+      Toys Images_15: 1486033973530338634
+      Toys Images_16: -4801430047133553047
+      Toys Images_17: 2656246402077828802
+      Toys Images_18: -4591619153326328775
+      Toys Images_19: -702846951151251756
+      Toys Images_2: 5649599078120546136
+      Toys Images_20: 2631133563988297083
+      Toys Images_21: -900628928293677231
+      Toys Images_22: -1930043094349276271
+      Toys Images_23: -7588040006193817339
+      Toys Images_24: 465386666772127685
+      Toys Images_25: -2147384053038635780
+      Toys Images_26: 1073523078153944540
+      Toys Images_27: 1613229792752907043
+      Toys Images_28: -3673803109225391694
+      Toys Images_29: -2197944101040575146
+      Toys Images_3: 486484743297419198
+      Toys Images_30: -5970368083420568728
+      Toys Images_31: 3241604343681532369
+      Toys Images_4: 2614920654859133109
+      Toys Images_5: 3776944025489006220
+      Toys Images_6: -9143590550560711397
+      Toys Images_7: -4766800969802485675
+      Toys Images_8: 402166704503371535
+      Toys Images_9: 8953384056709598892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

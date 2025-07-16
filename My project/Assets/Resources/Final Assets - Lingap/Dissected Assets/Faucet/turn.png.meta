@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8ac8a67495cad9340b02ccf05f1a6949
+guid: 7e10399fb14fc3e4da19d7d6387817c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1924447104105083683
-    second: Faucet chuchu bg_0
+      213: -1434779733409912027
+    second: turn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Faucet chuchu bg_0
+      name: turn_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 28
+        y: 88
+        width: 875
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddc89c21e8dfa45e0800000000000000
-      internalID: -1924447104105083683
+      spriteID: 52b2c2b2f63a61ce0800000000000000
+      internalID: -1434779733409912027
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Faucet chuchu bg_0: -1924447104105083683
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
