@@ -6,11 +6,16 @@ public class FaucetHandleController : MonoBehaviour
 {
     [Header("Rotation Settings")]
     public float rotationSpeed = 200f;
-    public float minAngle = -90f; // Fully open
-    public float maxAngle = 0f;   // Fully closed
+    public float minAngle; // Fully open
+    public float maxAngle;   // Fully closed
+    public Transform pivotPoint;  // ⬅️ New: the circular center of the handle
+    public Transform handleArm;   // ⬅️ New: the actual handle to rotate
+    
+    [Header("Water Stream")]
+    public SpriteRenderer waterRenderer; // ⬅️ New: assign the water sprite here
 
     [Header("Proceed Button (UI Canvas)")]
-    public GameObject proceedButton; // Canvas UI button shown when faucet is open
+    public GameObject proceedButton;
 
     [Header("Optional Task Tracking")]
     [SerializeField] private string taskID;
@@ -18,6 +23,7 @@ public class FaucetHandleController : MonoBehaviour
     private Camera cam;
     private bool isDragging = false;
     private Vector2 startPos;
+    private float currentAngle = 0f;
 
     void Awake()
     {
@@ -27,16 +33,12 @@ public class FaucetHandleController : MonoBehaviour
 
     void Update()
     {
-        if (Touchscreen.current?.primaryTouch.press.isPressed == true)
-        {
-            HandleTouch();
-        }
-        else if (Mouse.current?.leftButton.isPressed == true)
-        {
-            HandleMouse();
-        }
+    #if UNITY_EDITOR
+        HandleMouse();
+    #else
+        HandleTouch();
+    #endif
     }
-
     void HandleMouse()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -65,7 +67,9 @@ public class FaucetHandleController : MonoBehaviour
 
     void HandleTouch()
     {
-        var touch = Touchscreen.current.primaryTouch;
+            var touch = Touchscreen.current?.primaryTouch;
+
+        if (touch == null) return;
 
         if (touch.press.wasPressedThisFrame)
         {
@@ -99,24 +103,49 @@ public class FaucetHandleController : MonoBehaviour
 
     void RotateHandle(float deltaX)
     {
-        float currentY = transform.localEulerAngles.y;
-        if (currentY > 180f) currentY -= 360f; // Normalize to -180 ~ 180
+        currentAngle += deltaX * rotationSpeed * Time.deltaTime;
+        currentAngle = Mathf.Clamp(currentAngle, minAngle, maxAngle);
 
-        float newY = currentY + (-deltaX * rotationSpeed * Time.deltaTime);
-        newY = Mathf.Clamp(newY, minAngle, maxAngle);
+        if (handleArm != null && pivotPoint != null)
+        {
+            handleArm.transform.RotateAround(pivotPoint.position, Vector3.forward, currentAngle - handleArm.localEulerAngles.z);
+        }
 
-        transform.localEulerAngles = new Vector3(0f, newY, 0f);
+        UpdateWaterOpacity();
 
-        // Show button when fully open
-        if (Mathf.Abs(newY - minAngle) < 1f)
+        float z = handleArm.localEulerAngles.z;
+        if (Mathf.Abs(z - maxAngle) <= 1f) // 90° = closed
         {
             if (proceedButton != null && !proceedButton.activeSelf)
             {
-                Debug.Log("✅ Faucet is fully opened! Proceed button unlocked.");
+                Debug.Log("✅ Faucet is fully closed! Proceed button unlocked.");
                 proceedButton.SetActive(true);
             }
         }
     }
+
+
+
+    void UpdateWaterOpacity()
+    {
+        if (waterRenderer != null)
+        {
+            float z = handleArm.localEulerAngles.z;
+            Color c = waterRenderer.color;
+
+            if (z > 0)
+            { 
+                c.a = Mathf.Clamp01(1 - (z / maxAngle)); // 90 → 0, 0 → 1
+            }
+            else
+            {
+                c.a = 0;
+            }
+
+            waterRenderer.color = c; // ← apply the change!
+        }
+    }
+
 
     public void OnProceedPressed()
     {
@@ -128,7 +157,6 @@ public class FaucetHandleController : MonoBehaviour
         if (!string.IsNullOrEmpty(taskID))
             TaskManager.Instance.IncrementTask(taskID);
 
-        // Optional: disable faucet minigame or load next step here
-        transform.parent.gameObject.SetActive(false); // assumes handle is child of faucet minigame
+        transform.parent.gameObject.SetActive(false);
     }
 }
