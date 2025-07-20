@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2994876668434281106}
   - component: {fileID: 414626862597004072}
   - component: {fileID: 2141354368730520245}
-  - component: {fileID: 8917715380090381864}
+  - component: {fileID: 5576421484549185038}
   m_Layer: 0
   m_Name: Fork
   m_TagString: Untagged
@@ -155,7 +155,7 @@ PolygonCollider2D:
       - {x: 0.055, y: -0.14999999}
       - {x: 0.055, y: 0.19999999}
   m_UseDelaunayMesh: 0
---- !u!114 &8917715380090381864
+--- !u!114 &5576421484549185038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3006583270432859466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 42832929a4cd0af4e8ae2f749810b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: clean_utensils
+  objectType: 2

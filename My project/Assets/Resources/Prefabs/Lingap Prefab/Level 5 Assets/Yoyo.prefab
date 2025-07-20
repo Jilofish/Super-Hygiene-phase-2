@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6300180564922219792}
   - component: {fileID: 2298863769907676053}
   - component: {fileID: 1942793315361252553}
-  - component: {fileID: 4359008960156558332}
+  - component: {fileID: 739349723108296950}
   m_Layer: 0
   m_Name: Yoyo
-  m_TagString: Untagged
+  m_TagString: Toy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.75}
   m_EdgeRadius: 0
---- !u!114 &4359008960156558332
+--- !u!114 &739349723108296950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9164324671286360170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: collect_toys

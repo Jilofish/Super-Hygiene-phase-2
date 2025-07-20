@@ -10,7 +10,7 @@ public class FaucetHandleController : MonoBehaviour
     public float maxAngle;   // Fully closed
     public Transform pivotPoint;  // ⬅️ New: the circular center of the handle
     public Transform handleArm;   // ⬅️ New: the actual handle to rotate
-    
+
     [Header("Water Stream")]
     public SpriteRenderer waterRenderer; // ⬅️ New: assign the water sprite here
 
@@ -33,11 +33,11 @@ public class FaucetHandleController : MonoBehaviour
 
     void Update()
     {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         HandleMouse();
-    #else
+#else
         HandleTouch();
-    #endif
+#endif
     }
     void HandleMouse()
     {
@@ -67,7 +67,7 @@ public class FaucetHandleController : MonoBehaviour
 
     void HandleTouch()
     {
-            var touch = Touchscreen.current?.primaryTouch;
+        var touch = Touchscreen.current?.primaryTouch;
 
         if (touch == null) return;
 
@@ -134,15 +134,15 @@ public class FaucetHandleController : MonoBehaviour
             Color c = waterRenderer.color;
 
             if (z > 0)
-            { 
-                c.a = Mathf.Clamp01(1 - (z / maxAngle)); // 90 → 0, 0 → 1
+            {
+                c.a = Mathf.Clamp01(1 - (z / maxAngle));
             }
             else
             {
                 c.a = 0;
             }
 
-            waterRenderer.color = c; // ← apply the change!
+            waterRenderer.color = c;
         }
     }
 
@@ -159,4 +159,5 @@ public class FaucetHandleController : MonoBehaviour
 
         transform.parent.gameObject.SetActive(false);
     }
+    
 }
