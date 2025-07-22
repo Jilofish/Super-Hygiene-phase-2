@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 800756695975741870}
   - component: {fileID: 8859694413215187774}
   - component: {fileID: 2565505992333509887}
-  - component: {fileID: 1987042842418276624}
+  - component: {fileID: -481403818531240650}
   m_Layer: 0
   m_Name: Building Blocks
-  m_TagString: Untagged
+  m_TagString: Toy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.99}
   m_EdgeRadius: 0
---- !u!114 &1987042842418276624
+--- !u!114 &-481403818531240650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8110061037931698826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: collect_toys

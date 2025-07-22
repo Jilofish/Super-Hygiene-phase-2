@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1014195938268235667}
   - component: {fileID: 4309207303057861557}
   - component: {fileID: 8236668049664818296}
-  - component: {fileID: -2543414333786331871}
+  - component: {fileID: 5440935183308483831}
   m_Layer: 0
   m_Name: Spoon
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.51, y: 2}
   m_EdgeRadius: 0
---- !u!114 &-2543414333786331871
+--- !u!114 &5440935183308483831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6061508455396735451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 42832929a4cd0af4e8ae2f749810b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: clean_utensils
+  objectType: 1

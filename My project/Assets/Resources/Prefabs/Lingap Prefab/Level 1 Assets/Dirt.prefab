@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1014195938268235667}
   - component: {fileID: 4309207303057861557}
   - component: {fileID: -1388828006437341010}
-  - component: {fileID: -9137255088054927411}
+  - component: {fileID: 9055262797982459182}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Untagged
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 9.37269
---- !u!114 &-9137255088054927411
+--- !u!114 &9055262797982459182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

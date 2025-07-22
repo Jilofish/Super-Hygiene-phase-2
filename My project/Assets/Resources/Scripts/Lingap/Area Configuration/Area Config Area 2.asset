@@ -18,8 +18,8 @@ MonoBehaviour:
     description: Ayusin ang upuan.
     goalCount: 1
   - taskID: wipe_water
-    description: Punasan ang natapon na tubig at gatas.
-    goalCount: 2
+    description: Punasan ang natapon na gatas.
+    goalCount: 1
   - taskID: clean_utensils
     description: Pagsama-samahin ang mga plato, baso at kutsyara.
     goalCount: 5

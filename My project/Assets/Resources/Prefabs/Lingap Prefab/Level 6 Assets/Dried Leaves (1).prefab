@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8549152783655563585}
   - component: {fileID: 5891775470046091531}
   - component: {fileID: 2849603554767990812}
+  - component: {fileID: 8878344970168058216}
   - component: {fileID: 2268169071203436645}
   m_Layer: 0
   m_Name: Dried Leaves (1)
@@ -135,6 +136,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.85}
   m_EdgeRadius: 0
+--- !u!114 &8878344970168058216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722925137397322347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskID: sweep_trash
 --- !u!114 &2268169071203436645
 MonoBehaviour:
   m_ObjectHideFlags: 0

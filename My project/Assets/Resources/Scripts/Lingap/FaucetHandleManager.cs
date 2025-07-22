@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 public class FaucetHandleManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class FaucetHandleManager : MonoBehaviour
     public GameObject currentArea;        // Example: Area_1
     public GameObject faucetMinigame;     // World-space faucet screen with handle, etc.
     public GameObject AreaUI;          // UI Canvas for the area
+    public FaucetHandleController FaucetHandle; 
+    public Button proceedButton; // Optional: UI button to proceed after faucet is closed
 
     private Camera cam;
 
@@ -40,9 +43,11 @@ public class FaucetHandleManager : MonoBehaviour
             if (currentArea != null) currentArea.SetActive(false);
             if (faucetMinigame != null) faucetMinigame.SetActive(true);
             if (AreaUI != null) AreaUI.SetActive(false);
-
-            // Optional: destroy trigger to prevent reuse
-            Destroy(gameObject);
+            proceedButton.onClick.AddListener(FaucetClosed);
         }
+    }
+    public void FaucetClosed()
+    {
+        Destroy(gameObject);
     }
 }

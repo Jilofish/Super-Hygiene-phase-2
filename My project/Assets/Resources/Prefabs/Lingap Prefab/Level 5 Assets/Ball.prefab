@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3667789613634431126}
   - component: {fileID: 8485423225110495224}
   - component: {fileID: 3149738158579010386}
-  - component: {fileID: 3064229408511401598}
+  - component: {fileID: -690643890552846030}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Toy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &3064229408511401598
+--- !u!114 &-690643890552846030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4964896791234974596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: collect_toys

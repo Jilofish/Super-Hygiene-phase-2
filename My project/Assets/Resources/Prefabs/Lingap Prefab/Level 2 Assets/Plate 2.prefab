@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1014195938268235667}
   - component: {fileID: 4309207303057861557}
   - component: {fileID: 5620445109991939053}
-  - component: {fileID: 1051386176168412625}
+  - component: {fileID: 6290067908543328148}
   m_Layer: 0
   m_Name: Plate 2
   m_TagString: Untagged
@@ -159,7 +159,7 @@ PolygonCollider2D:
       - {x: 0.57, y: -0.45999998}
       - {x: 0.7, y: -0.42}
   m_UseDelaunayMesh: 0
---- !u!114 &1051386176168412625
+--- !u!114 &6290067908543328148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6061508455396735451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 42832929a4cd0af4e8ae2f749810b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   taskID: clean_utensils
+  objectType: 0
