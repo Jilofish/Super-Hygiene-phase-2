@@ -20,6 +20,9 @@ public class FaucetHandleController : MonoBehaviour
     [Header("Optional Task Tracking")]
     [SerializeField] private string taskID;
 
+    [Header("Faucet Audio")]
+    public AudioSource faucetAudioSource;
+
     private Camera cam;
     private bool isDragging = false;
     private Vector2 startPos;
@@ -126,25 +129,35 @@ public class FaucetHandleController : MonoBehaviour
 
 
 
-    void UpdateWaterOpacity()
+   void UpdateWaterOpacity()
+{
+    if (waterRenderer != null || faucetAudioSource != null)
     {
+        float z = handleArm.localEulerAngles.z;
+
+        // Normalize angle from 0 (fully open) to maxAngle (fully closed)
+        float normalized = Mathf.InverseLerp(minAngle, maxAngle, z);
+
+        // Water opacity (reverse: 1 when open, 0 when closed)
         if (waterRenderer != null)
         {
-            float z = handleArm.localEulerAngles.z;
             Color c = waterRenderer.color;
-
-            if (z > 0)
-            {
-                c.a = Mathf.Clamp01(1 - (z / maxAngle));
-            }
-            else
-            {
-                c.a = 0;
-            }
-
+            c.a = 1f - normalized;
             waterRenderer.color = c;
         }
+
+        // Faucet sound volume (same logic: full when open, silent when closed)
+        if (faucetAudioSource != null)
+        {
+            faucetAudioSource.volume = 1f - normalized;
+            if (!faucetAudioSource.isPlaying && faucetAudioSource.volume > 0f)
+                faucetAudioSource.Play();
+            else if (faucetAudioSource.volume <= 0f)
+                faucetAudioSource.Stop();
+        }
     }
+}
+
 
 
     public void OnProceedPressed()
