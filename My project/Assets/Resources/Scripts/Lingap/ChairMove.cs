@@ -69,5 +69,6 @@ public class ChairMove : MonoBehaviour
     void TriggerSetActive()
     {
         chairMoveManager.chair.SetActive(true);
+        chairMoveManager.table.SetActive(true);
     }
 }
