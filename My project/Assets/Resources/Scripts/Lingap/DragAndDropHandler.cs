@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Collider2D))]
 public class DragAndDropHandler : MonoBehaviour
 {
     [SerializeField] private string taskID; 
+    [SerializeField] private SFXPlayer sfxPlayer;
     private Camera cam;
     private bool isDragging = false;
     private Vector3 offset;
@@ -18,6 +20,11 @@ public class DragAndDropHandler : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
+        if (sfxPlayer == null)
+{
+    sfxPlayer = FindObjectOfType<SFXPlayer>();
+}
+
     }
 
     void Update()
@@ -92,6 +99,36 @@ public class DragAndDropHandler : MonoBehaviour
         }
     }
 
+IEnumerator MoveBackToOriginalPosition()
+{
+    float duration = 0.5f;
+    float elapsed = 0f;
+    Vector3 startPos = transform.position;
+
+    float shakeAmplitude = 0.2f; // How far left and right
+    int shakeFrequency = 8;      // How many full shakes during duration
+
+    while (elapsed < duration)
+    {
+        float t = elapsed / duration;
+
+        // Main return movement
+        Vector3 smoothPos = Vector3.Lerp(startPos, originalPosition, t);
+
+        // Horizontal "no" shake using sine wave
+        float shakeX = Mathf.Sin(t * Mathf.PI * 2 * shakeFrequency) * shakeAmplitude * (1f - t); // fade out at end
+        Vector3 shakeOffset = new Vector3(shakeX, 0f, 0f);
+
+        transform.position = smoothPos + shakeOffset;
+
+        elapsed += Time.deltaTime;
+        yield return null;
+    }
+
+    transform.position = originalPosition;
+}
+
+
     void DropItem()
     {
         isDragging = false;
@@ -105,7 +142,7 @@ public class DragAndDropHandler : MonoBehaviour
                 if (IsValidDropTarget(hit.collider.gameObject))
                 {
                     Debug.Log("Dropped on valid target: " + hit.collider.name);
-
+                    sfxPlayer?.PlayCorrect();
                     if (!string.IsNullOrEmpty(taskID))
                     {
                         TaskManager.Instance.IncrementTask(taskID);
@@ -116,7 +153,8 @@ public class DragAndDropHandler : MonoBehaviour
                 }
             }
         }
-
+        sfxPlayer?.PlayWrong();
+        StartCoroutine(MoveBackToOriginalPosition());
         transform.position = originalPosition;
     }
     bool IsValidDropTarget(GameObject target)
