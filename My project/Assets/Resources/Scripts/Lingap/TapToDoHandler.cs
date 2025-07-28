@@ -15,15 +15,18 @@ public class TapToDoHandler : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
-        HandleMouse();
-#else
-        HandleTouch();
-#endif
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            HandleTouch();
+        }
+        else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        {
+            HandleMouse();
+        }
     }
-
     void HandleMouse()
     {
+        
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -37,22 +40,22 @@ public class TapToDoHandler : MonoBehaviour
     }
 
     void HandleTouch()
-    {
-        if (Touchscreen.current == null) return;
-
-        var touch = Touchscreen.current.primaryTouch;
-        Vector2 touchPos = cam.ScreenToWorldPoint(touch.position.ReadValue());
-
-        if (touch.press.wasPressedThisFrame)
         {
-            RaycastHit2D hit = Physics2D.Raycast(touchPos, Vector2.zero);
+            var touch = Touchscreen.current.primaryTouch;
 
-            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            if (touch.press.wasPressedThisFrame)
             {
-                DoAction();
+                // Debug.Log("Simulated touch press detected!");
+                
+                Vector2 touchPos = cam.ScreenToWorldPoint(touch.position.ReadValue());
+                RaycastHit2D hit = Physics2D.Raycast(touchPos, Vector2.zero);
+
+                if (hit.collider != null && hit.collider.gameObject == gameObject)
+                {
+                    DoAction();
+                }
             }
         }
-    }
 
     void DoAction()
     {
@@ -60,7 +63,6 @@ public class TapToDoHandler : MonoBehaviour
         {
             TaskManager.Instance.IncrementTask(taskID);
         }
-
-        Destroy(gameObject); // remove object after tapping, just like drag drop
+        Destroy(gameObject);
     }
 }

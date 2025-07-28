@@ -75,13 +75,31 @@ public class LevelUnlockManager : MonoBehaviour
         }
     }
 
-    private void UpdateButtonStates()
+   private void UpdateButtonStates()
+{
+    for (int i = 0; i < levelButtons.Length; i++)
     {
-        for (int i = 0; i < levelButtons.Length; i++)
+        if (i < unlockedLevelIndex)
         {
-            levelButtons[i].interactable = (i == unlockedLevelIndex);
+            // 🔒 Past levels are already done; disable
+            levelButtons[i].interactable = false;
+            levelButtons[i].gameObject.SetActive(false); // Or just disable interaction
+        }
+        else if (i == unlockedLevelIndex)
+        {
+            // 🔓 Current level available
+            levelButtons[i].interactable = true;
+            levelButtons[i].gameObject.SetActive(true);
+        }
+        else
+        {
+            // 🔐 Future levels not yet available
+            levelButtons[i].interactable = false;
+            levelButtons[i].gameObject.SetActive(false); // Optional: hide future buttons too
         }
     }
+}
+
     public void DisableCurrentAreaGroup()
     {
         string currentAreaID = areaLoader.areaID; // create a public getter in AreaLoader if needed

@@ -1,0 +1,2606 @@
+fileFormatVersion: 2
+guid: 6452c607134c3ac42866992fee19e930
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5466334972115368280
+    second: folded-blanker_0
+  - first:
+      213: -7489473581474634419
+    second: folded-blanker_1
+  - first:
+      213: -8115378744658211503
+    second: folded-blanker_2
+  - first:
+      213: 1409778957925793004
+    second: folded-blanker_3
+  - first:
+      213: 4636021252398866742
+    second: folded-blanker_4
+  - first:
+      213: 6211679596982312709
+    second: folded-blanker_5
+  - first:
+      213: -5750300013853179742
+    second: folded-blanker_6
+  - first:
+      213: 149142773650621314
+    second: folded-blanker_7
+  - first:
+      213: -1706370549463448234
+    second: folded-blanker_8
+  - first:
+      213: -6872277219024177956
+    second: folded-blanker_9
+  - first:
+      213: 6902154464082710806
+    second: folded-blanker_10
+  - first:
+      213: -227265245158469105
+    second: folded-blanker_11
+  - first:
+      213: -2129450092241253476
+    second: folded-blanker_12
+  - first:
+      213: -5192605833038562604
+    second: folded-blanker_13
+  - first:
+      213: 7132920186447728771
+    second: folded-blanker_14
+  - first:
+      213: -1641171816499333918
+    second: folded-blanker_15
+  - first:
+      213: 8850313863482704393
+    second: folded-blanker_16
+  - first:
+      213: 1649859026150588281
+    second: folded-blanker_17
+  - first:
+      213: -1560105698883324211
+    second: folded-blanker_18
+  - first:
+      213: 6010245549911590067
+    second: folded-blanker_19
+  - first:
+      213: -4119214204422595003
+    second: folded-blanker_20
+  - first:
+      213: 2633405305395699254
+    second: folded-blanker_21
+  - first:
+      213: -3095520895418568343
+    second: folded-blanker_22
+  - first:
+      213: 6878291239981112262
+    second: folded-blanker_23
+  - first:
+      213: 5207565371414505877
+    second: folded-blanker_24
+  - first:
+      213: -2639557825749711289
+    second: folded-blanker_25
+  - first:
+      213: -2068722021475551399
+    second: folded-blanker_26
+  - first:
+      213: -7816542311108808918
+    second: folded-blanker_27
+  - first:
+      213: 2118040667013750412
+    second: folded-blanker_28
+  - first:
+      213: 2756943172312539922
+    second: folded-blanker_29
+  - first:
+      213: -957955687996119256
+    second: folded-blanker_30
+  - first:
+      213: -1236125413982839361
+    second: folded-blanker_31
+  - first:
+      213: -6553814138227072069
+    second: folded-blanker_32
+  - first:
+      213: -8589173713638952258
+    second: folded-blanker_33
+  - first:
+      213: -1188397312561193570
+    second: folded-blanker_34
+  - first:
+      213: -2216118723722657964
+    second: folded-blanker_35
+  - first:
+      213: 5005027564280488107
+    second: folded-blanker_36
+  - first:
+      213: -3789737102865491774
+    second: folded-blanker_37
+  - first:
+      213: -5168446069304735505
+    second: folded-blanker_38
+  - first:
+      213: 5073294990662480504
+    second: folded-blanker_39
+  - first:
+      213: -6250604860301973079
+    second: folded-blanker_40
+  - first:
+      213: 5685815792940228341
+    second: folded-blanker_41
+  - first:
+      213: 3188418855847662493
+    second: folded-blanker_42
+  - first:
+      213: 7085269198108114266
+    second: folded-blanker_43
+  - first:
+      213: -1608476513779848185
+    second: folded-blanker_44
+  - first:
+      213: 1210859179938225764
+    second: folded-blanker_45
+  - first:
+      213: -6056530477319783754
+    second: folded-blanker_46
+  - first:
+      213: -6647104421567084319
+    second: folded-blanker_47
+  - first:
+      213: -5358872916154507056
+    second: folded-blanker_48
+  - first:
+      213: -6288267731190677451
+    second: folded-blanker_49
+  - first:
+      213: -8406556187782223222
+    second: folded-blanker_50
+  - first:
+      213: -6314021498147691742
+    second: folded-blanker_51
+  - first:
+      213: 5507178988903005620
+    second: folded-blanker_52
+  - first:
+      213: 7343307994243726090
+    second: folded-blanker_53
+  - first:
+      213: 4895196282092744853
+    second: folded-blanker_54
+  - first:
+      213: -8322407010110978099
+    second: folded-blanker_55
+  - first:
+      213: 4964479094716543951
+    second: folded-blanker_56
+  - first:
+      213: 8491481240969020433
+    second: folded-blanker_57
+  - first:
+      213: 1308543789206732800
+    second: folded-blanker_58
+  - first:
+      213: 844544295112879331
+    second: folded-blanker_59
+  - first:
+      213: -2891362567642573974
+    second: folded-blanker_60
+  - first:
+      213: 62415628636565730
+    second: folded-blanker_61
+  - first:
+      213: 4835938145701948875
+    second: folded-blanker_62
+  - first:
+      213: 1600077913411720012
+    second: folded-blanker_63
+  - first:
+      213: -4347417230917177192
+    second: folded-blanker_64
+  - first:
+      213: 2608366070252381932
+    second: folded-blanker_65
+  - first:
+      213: -4120538307825160020
+    second: folded-blanker_66
+  - first:
+      213: -3540230190848262643
+    second: folded-blanker_67
+  - first:
+      213: -3935712800908591637
+    second: folded-blanker_68
+  - first:
+      213: 9114168408681620846
+    second: folded-blanker_69
+  - first:
+      213: 7643575114049077097
+    second: folded-blanker_70
+  - first:
+      213: 8910622402439299856
+    second: folded-blanker_71
+  - first:
+      213: -8096339141705201669
+    second: folded-blanker_72
+  - first:
+      213: -4916064956381610203
+    second: folded-blanker_73
+  - first:
+      213: -5022810200361099706
+    second: folded-blanker_74
+  - first:
+      213: -6252433232991970370
+    second: folded-blanker_75
+  - first:
+      213: 6526316607670576810
+    second: folded-blanker_76
+  - first:
+      213: 5350028059664319818
+    second: folded-blanker_77
+  - first:
+      213: -2677812323650544777
+    second: folded-blanker_78
+  - first:
+      213: 3422795360361671528
+    second: folded-blanker_79
+  - first:
+      213: 4929979059410978891
+    second: folded-blanker_80
+  - first:
+      213: 5190828570871552508
+    second: folded-blanker_81
+  - first:
+      213: -7507308628199725955
+    second: folded-blanker_82
+  - first:
+      213: -8176259908680247890
+    second: folded-blanker_83
+  - first:
+      213: 8392997564032103033
+    second: folded-blanker_84
+  - first:
+      213: -1255773007470456004
+    second: folded-blanker_85
+  - first:
+      213: 6850838716932534090
+    second: folded-blanker_86
+  - first:
+      213: 3319844317582046830
+    second: folded-blanker_87
+  - first:
+      213: 167036717456394508
+    second: folded-blanker_88
+  - first:
+      213: 7175900879404865868
+    second: folded-blanker_89
+  - first:
+      213: -1244968635103133820
+    second: folded-blanker_90
+  - first:
+      213: -2019168435946940149
+    second: folded-blanker_91
+  - first:
+      213: 2693297406806609877
+    second: folded-blanker_92
+  - first:
+      213: 252810687719657611
+    second: folded-blanker_93
+  - first:
+      213: 3449529741834777746
+    second: folded-blanker_94
+  - first:
+      213: 3279839587649153456
+    second: folded-blanker_95
+  - first:
+      213: -4665788705700578380
+    second: folded-blanker_96
+  - first:
+      213: -1687063917492265320
+    second: folded-blanker_97
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: folded-blanker_0
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 886
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8593b3cf1b25cdb40800000000000000
+      internalID: 5466334972115368280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 900
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d452885657b001890800000000000000
+      internalID: -7489473581474634419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 913
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d44e26702606f80800000000000000
+      internalID: -8115378744658211503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_3
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 926
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecbcfe2e7a809310800000000000000
+      internalID: 1409778957925793004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_4
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 939
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631656034c4765040800000000000000
+      internalID: 4636021252398866742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_5
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 950
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f1cacbea1543650800000000000000
+      internalID: 6211679596982312709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_6
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 895
+        width: 221
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a08b529a94d230b0800000000000000
+      internalID: -5750300013853179742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_7
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 894
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283034cff8cd11200800000000000000
+      internalID: 149142773650621314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_8
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 954
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550b08a601c158e0800000000000000
+      internalID: -1706370549463448234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_9
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 890
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4fd0ab744c0a0a0800000000000000
+      internalID: -6872277219024177956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_10
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 948
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611d6887ae069cf50800000000000000
+      internalID: 6902154464082710806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_11
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 943
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f029980b67798dcf0800000000000000
+      internalID: -227265245158469105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_12
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 937
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b89056c6ca272e0800000000000000
+      internalID: -2129450092241253476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_13
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 931
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da7d17a18820f7b0800000000000000
+      internalID: -5192605833038562604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_14
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 925
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3801e642e193df260800000000000000
+      internalID: 7132920186447728771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_15
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 919
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4bc2e9de26939e0800000000000000
+      internalID: -1641171816499333918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_16
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 914
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9020a9f5191a2da70800000000000000
+      internalID: 8850313863482704393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_17
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 900
+        width: 175
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f7d2ffa0a75e610800000000000000
+      internalID: 1649859026150588281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_18
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 889
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc63ff5f124695ae0800000000000000
+      internalID: -1560105698883324211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_19
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 884
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b44a57eb7ea86350800000000000000
+      internalID: 6010245549911590067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_20
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 884
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ed5af618c95d6c0800000000000000
+      internalID: -4119214204422595003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_21
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 879
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e5db14c2cbb8420800000000000000
+      internalID: 2633405305395699254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_22
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 878
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961f6c975208a05d0800000000000000
+      internalID: -3095520895418568343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 873
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb51c4a079947f50800000000000000
+      internalID: 6878291239981112262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 872
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59969cb4d1df44840800000000000000
+      internalID: 5207565371414505877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_25
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 873
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746061874286e5bd0800000000000000
+      internalID: -2639557825749711289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_26
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 867
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957fbe2384c6a43e0800000000000000
+      internalID: -2068722021475551399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_27
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 864
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f6c8e8e20168390800000000000000
+      internalID: -7816542311108808918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_28
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 858
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e9f29c3cac46d10800000000000000
+      internalID: 2118040667013750412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_29
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 860
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213a0a35531a24620800000000000000
+      internalID: 2756943172312539922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_30
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 861
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8272d629068a4b2f0800000000000000
+      internalID: -957955687996119256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_31
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 855
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd58b93c7668dee0800000000000000
+      internalID: -1236125413982839361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_32
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 161
+        width: 1299
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3ea0fc3cc2c05a0800000000000000
+      internalID: -6553814138227072069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_33
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 830
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb27d6cc3002dc880800000000000000
+      internalID: -8589173713638952258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_34
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 844
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9dd2ccc0f6f18fe0800000000000000
+      internalID: -1188397312561193570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_35
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 833
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f3b6423c3ce31e0800000000000000
+      internalID: -2216118723722657964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_36
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 847
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba02afb4d0e657540800000000000000
+      internalID: 5005027564280488107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_37
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 840
+        width: 79
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8959f0f26286bc0800000000000000
+      internalID: -3789737102865491774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_38
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 844
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8c35efeadf548b0800000000000000
+      internalID: -5168446069304735505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_39
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 831
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872b43f1ae6f76640800000000000000
+      internalID: 5073294990662480504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_40
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 825
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9ee562ff36149a0800000000000000
+      internalID: -6250604860301973079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_41
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 823
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe1284c65318ee40800000000000000
+      internalID: 5685815792940228341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_42
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 815
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9315f17e0a8f3c20800000000000000
+      internalID: 3188418855847662493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_43
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 819
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d304bdbcee35260800000000000000
+      internalID: 7085269198108114266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_44
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 822
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ce79ef12b8da9e0800000000000000
+      internalID: -1608476513779848185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_45
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 824
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e1d3d3206ddc010800000000000000
+      internalID: 1210859179938225764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_46
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 819
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6baf608ae91e2fba0800000000000000
+      internalID: -6056530477319783754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_47
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 806
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8c0971fbdb0c3a0800000000000000
+      internalID: -6647104421567084319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_48
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 810
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0262ca97571a5b0800000000000000
+      internalID: -5358872916154507056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_49
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 813
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53004dda0d59bb8a0800000000000000
+      internalID: -6288267731190677451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_50
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 814
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ae0e2efa9e55b80800000000000000
+      internalID: -8406556187782223222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_51
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 800
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2232aba86e61068a0800000000000000
+      internalID: -6314021498147691742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_52
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 807
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdfe04bc1e6d6c40800000000000000
+      internalID: 5507178988903005620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_53
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 797
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bfe29d6bba8e560800000000000000
+      internalID: 7343307994243726090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_54
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 776
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59073fb251b3fe340800000000000000
+      internalID: 4895196282092744853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_55
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 776
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc74d161beed08c80800000000000000
+      internalID: -8322407010110978099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_56
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 753
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3be670f6f55e440800000000000000
+      internalID: 4964479094716543951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_57
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 752
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1140ad8e23dc7d570800000000000000
+      internalID: 8491481240969020433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_58
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 749
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00006b0b4a1e82210800000000000000
+      internalID: 1308543789206732800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_59
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 739
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec2943df8c68bb00800000000000000
+      internalID: 844544295112879331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_60
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 727
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a639dc65011dfd7d0800000000000000
+      internalID: -2891362567642573974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_61
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 722
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0b05dfeaebdd000800000000000000
+      internalID: 62415628636565730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_62
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 721
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd63522f14bc1340800000000000000
+      internalID: 4835938145701948875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_63
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 702
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c439ad9726e943610800000000000000
+      internalID: 1600077913411720012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_64
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 695
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890f4c4ef0fdaa3c0800000000000000
+      internalID: -4347417230917177192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_65
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 699
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce623950f17c23420800000000000000
+      internalID: 2608366070252381932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_66
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 691
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca031b69d38e0d6c0800000000000000
+      internalID: -4120538307825160020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_67
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 678
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e306bf5639edec0800000000000000
+      internalID: -3540230190848262643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_68
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 671
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bedb2e35f0a8169c0800000000000000
+      internalID: -3935712800908591637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_69
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 668
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e652e86f0e70c7e70800000000000000
+      internalID: 9114168408681620846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_70
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 649
+        width: 12
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f39ee911f631a60800000000000000
+      internalID: 7643575114049077097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_71
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 653
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01348015dd3e8ab70800000000000000
+      internalID: 8910622402439299856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_72
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 650
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf70295627604af80800000000000000
+      internalID: -8096339141705201669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_73
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 660
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fb026f7f0a6cbb0800000000000000
+      internalID: -4916064956381610203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_74
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 596
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e94491cb46b4ab0800000000000000
+      internalID: -5022810200361099706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_75
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 626
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb9aa5f915ea39a0800000000000000
+      internalID: -6252433232991970370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_76
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 599
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6efe37062229a50800000000000000
+      internalID: 6526316607670576810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_77
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 626
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a450aa2bc2e1f3a40800000000000000
+      internalID: 5350028059664319818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_78
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 606
+        width: 8
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b55a911ef76dad0800000000000000
+      internalID: -2677812323650544777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_79
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 566
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b6639de36308f20800000000000000
+      internalID: 3422795360361671528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_80
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 570
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b484e4a95ddca6440800000000000000
+      internalID: 4929979059410978891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_81
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 580
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf95fb04517890840800000000000000
+      internalID: 5190828570871552508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_82
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 544
+        width: 15
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d742eecf39ea0d790800000000000000
+      internalID: -7507308628199725955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_83
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 471
+        width: 8
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea598d7cee6188e80800000000000000
+      internalID: -8176259908680247890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_84
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 476
+        width: 11
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9723ad401dae97470800000000000000
+      internalID: 8392997564032103033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_85
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 552
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3313336a19929ee0800000000000000
+      internalID: -1255773007470456004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_86
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 521
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fa1480481131f50800000000000000
+      internalID: 6850838716932534090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_87
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 445
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66b31b41d4721e20800000000000000
+      internalID: 3319844317582046830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_88
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 458
+        width: 9
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c098f60720f615200800000000000000
+      internalID: 167036717456394508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_89
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 440
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49175c84dbe59360800000000000000
+      internalID: 7175900879404865868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_90
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 434
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fbc2c5f9bf8bee0800000000000000
+      internalID: -1244968635103133820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_91
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 410
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0993b961097af3e0800000000000000
+      internalID: -2019168435946940149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_92
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 416
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df4037c8b3806520800000000000000
+      internalID: 2693297406806609877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_93
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 412
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80d3f42bf9228300800000000000000
+      internalID: 252810687719657611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_94
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 388
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294f43816013fdf20800000000000000
+      internalID: 3449529741834777746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_95
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 383
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b967164ab4548d20800000000000000
+      internalID: 3279839587649153456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_96
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 358
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbffaf74e9cf3fb0800000000000000
+      internalID: -4665788705700578380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: folded-blanker_97
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 321
+        width: 9
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e9e743e485698e0800000000000000
+      internalID: -1687063917492265320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

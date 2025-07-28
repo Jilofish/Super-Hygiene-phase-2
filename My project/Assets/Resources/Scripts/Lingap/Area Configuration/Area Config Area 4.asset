@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaID: Area_4
   tasks:
-  - taskID: wipe_dirt
-    description: Sort the toys
-    goalCount: 8
+  - taskID: collect_garbage
+    description: Pulutin ang kalat at itapon ito sa basurahan.
+    goalCount: 1
+  - taskID: collect_clothes
+    description: Pulutin ang mga damit at ilagay ito sa basket.
+    goalCount: 1
+  - taskID: off_water
+    description: Isara ang gripo.
+    goalCount: 1

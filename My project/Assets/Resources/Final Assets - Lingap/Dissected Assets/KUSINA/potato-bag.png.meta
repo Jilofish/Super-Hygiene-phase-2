@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      potato-bag_0: 4097765701202948644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

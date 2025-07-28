@@ -7,8 +7,8 @@ public class CutsceneSlideshow : MonoBehaviour
     public float fadeDuration = 1f;
     public float holdDuration = 2f;
     public GameObject slideshowContainer;
-    public ChangeSceneFromButton sceneChanger;  // ✅ Reference to your ChangeSceneFromButton script
-    public string nextSceneName;               // Name of the scene to load (e.g., "LoadingScene")
+    public ChangeSceneFromButton sceneChanger;  
+    public string nextSceneName;               
 
     void Awake()
     {
@@ -22,7 +22,13 @@ public class CutsceneSlideshow : MonoBehaviour
         slides[0].gameObject.SetActive(true);
     }
 
-    void Start()
+void Start()
+{
+    InitiateSlides();
+}
+
+
+    public void InitiateSlides()
     {
         StartCoroutine(PlaySlideshow());
     }

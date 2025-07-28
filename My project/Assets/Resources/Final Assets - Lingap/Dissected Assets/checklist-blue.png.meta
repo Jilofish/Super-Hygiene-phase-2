@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      checklist-blue_0: 429506076309870309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

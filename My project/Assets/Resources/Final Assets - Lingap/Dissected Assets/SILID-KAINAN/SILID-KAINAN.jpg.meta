@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SILID-KAINAN_0: -2703333996690188828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,6 @@
+using UnityEngine;
+public class ChairMoveManager :MonoBehaviour
+{
+    public GameObject chair;
+    public GameObject table;
+}

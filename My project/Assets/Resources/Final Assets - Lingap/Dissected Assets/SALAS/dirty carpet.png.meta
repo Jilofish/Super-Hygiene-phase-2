@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dirty carpet_0: -1747257189073375267
+      dirty carpet_1: 8766167240268398085
+      dirty carpet_2: -4847384035379213467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

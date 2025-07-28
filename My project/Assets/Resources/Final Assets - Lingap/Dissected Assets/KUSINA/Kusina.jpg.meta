@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kusina_0: 8163147058154623539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

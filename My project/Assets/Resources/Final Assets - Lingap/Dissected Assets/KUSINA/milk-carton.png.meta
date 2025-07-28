@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      milk-carton_0: 5077868679401402861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

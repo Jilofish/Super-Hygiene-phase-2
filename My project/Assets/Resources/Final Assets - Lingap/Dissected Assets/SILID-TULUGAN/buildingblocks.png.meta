@@ -142,37 +142,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buildingblocks_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 38
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b1a45b9ff4b0f1f0800000000000000
-      internalID: -1013110906242686539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: buildingblocks_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 0
         y: 0
-        width: 155
+        width: 200
         height: 199
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,7 +167,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 476f146bfe816924285c1d1ccae5fcc2
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +176,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      buildingblocks_0: -1013110906242686539
+      buildingblocks_1: -5696757435136560756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
