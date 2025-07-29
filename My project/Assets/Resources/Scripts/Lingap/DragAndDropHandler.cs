@@ -29,7 +29,6 @@ public class DragAndDropHandler : MonoBehaviour
 
     void Update()
     {
-    // Prefer touch if available
         if (Touchscreen.current != null && 
             (Touchscreen.current.primaryTouch.press.isPressed ||
             Touchscreen.current.primaryTouch.press.wasPressedThisFrame ||
