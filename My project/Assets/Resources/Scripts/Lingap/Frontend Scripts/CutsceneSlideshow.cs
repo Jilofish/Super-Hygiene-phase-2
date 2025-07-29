@@ -26,8 +26,6 @@ void Start()
 {
     InitiateSlides();
 }
-
-
     public void InitiateSlides()
     {
         StartCoroutine(PlaySlideshow());

@@ -19,7 +19,7 @@ MonoBehaviour:
     goalCount: 2
   - taskID: wipe_dirt
     description: Punasan ang alikabok at mga dumi sa sahig, bintana at sopa.
-    goalCount: 4
+    goalCount: 3
   - taskID: sort_toys
     description: Ilagay sa tamang lagayan ang mga laruan.
     goalCount: 3
