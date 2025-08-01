@@ -21,9 +21,9 @@ public class DragAndDropHandler : MonoBehaviour
     {
         originalPosition = transform.position;
         if (sfxPlayer == null)
-{
-    sfxPlayer = FindObjectOfType<SFXPlayer>();
-}
+    {
+        sfxPlayer = FindFirstObjectByType<SFXPlayer>();
+    }
 
     }
 

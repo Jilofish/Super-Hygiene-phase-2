@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class LevelUnlockManager : MonoBehaviour
 {
     [Header("Level Buttons (in order)")]
-    [SerializeField] private Button[] levelButtons;
+    [SerializeField] public Button[] levelButtons;
 
     [Header("Area Loader Reference")]
     [SerializeField] private AreaLoader areaLoader;
 
     [Header("Continue Button")]
-    [SerializeField] private GameObject continueButton;
+    [SerializeField] public GameObject continueButton;
 
     [Header("Tracking")]
     [SerializeField] private int unlockedLevelIndex = 0;
@@ -118,11 +118,28 @@ public class LevelUnlockManager : MonoBehaviour
     }
     public void ClearTaskUI()
     {
-        foreach (Transform child in areaLoader.taskUIContainer)
+        foreach (Transform child in areaLoader.AreaTaskChecker)
         {
             Destroy(child.gameObject);
         }
 
         Debug.Log("🧹 Cleared all Task UI items.");
     }
+    public void ResetValues()
+    {
+        // Reset the unlocked level index (or whatever you want to reset)
+        unlockedLevelIndex = 0;
+
+        // Reset button states
+        UpdateButtonStates();
+
+        // Optionally hide continue button again
+        continueButton.SetActive(false);
+
+        // If you want to clear tasks/UI as part of the reset
+        ClearTaskUI();
+
+        Debug.Log("🔄 All values have been reset!");
+    }
+
 }

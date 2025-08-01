@@ -48,7 +48,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _ZWrite: 0
     m_Colors:
-    - _BrushUV: {r: 0.42519602, g: 0.879342, b: 0.25, a: 0.25}
+    - _BrushUV: {r: 0.21880803, g: 0.69197637, b: 0.25, a: 0.25}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
