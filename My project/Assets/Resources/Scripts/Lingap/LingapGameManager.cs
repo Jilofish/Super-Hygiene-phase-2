@@ -92,49 +92,21 @@ public class LingapGameManager : MonoBehaviour
             }
         }
 
-        // Names for each scene target in order
-    string[] areaNames = new string[]
-    {
-        "SalasCS", "SilidKainanCS", "KusinaCS", "PalikuranCS", "SilidTuluganCS", "BakuranCS"
-    };
+
 
     // Instantiate level buttons and assign OnClick listeners
     for (int i = 0; i < 6; i++)
     {
         int index = i;
         Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
-        Transform StartCutsceneTransform = FindChild(uimanagement.CanvasTransform, "StartCutscene");
-        Button levelButtonInstance = Instantiate(
-            levelmanagerunlock.levelButtons[i],
-            LevelCutscenes,
-            false
-        );
-
-        int IncrementingAudioIndex = index + ButtonAudioIndex;
-
-        playaudio.triggers[IncrementingAudioIndex].targetObject = levelButtonInstance.gameObject;
-
-        levelmanagerunlock.levelButtons[i] = levelButtonInstance;
-        string currentArea = areaNames[index];
-        Transform target = FindChild(StartCutsceneTransform, currentArea);
-
-        if (target == null)
-        {
-            Debug.LogWarning($"Couldn't find {areaNames[index]} under Start Cutscene!");
-        }
+        GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
+        Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
         
 
         // Add the task UI activation
         levelButtonInstance.onClick.AddListener(() =>
         {
             arealoader.taskUIContainer.SetActive(true);
-            LevelCutscenes.gameObject.SetActive(false); 
-
-            if (target != null)
-            {
-                target.gameObject.SetActive(true);
-            }
-            taskpoints.OnLevelSelected(index);
         });
     }
 

@@ -270,12 +270,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 93151368772590326}
     m_Modifications:
     - target: {fileID: 8740174224457773164, guid: 8185efe756cfb5a4fafe860b0726d71b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0216074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740174224457773164, guid: 8185efe756cfb5a4fafe860b0726d71b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0171893
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740174224457773164, guid: 8185efe756cfb5a4fafe860b0726d71b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.55
+      value: 3.3511
       objectReference: {fileID: 0}
     - target: {fileID: 8740174224457773164, guid: 8185efe756cfb5a4fafe860b0726d71b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.05
+      value: -2.871
       objectReference: {fileID: 0}
     - target: {fileID: 8740174224457773164, guid: 8185efe756cfb5a4fafe860b0726d71b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -602,6 +610,10 @@ PrefabInstance:
       value: Milk Carton
       objectReference: {fileID: 0}
     - target: {fileID: 6978090070591334496, guid: 3c19648af8d5ba44884b4c57a79b277f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978090070591334496, guid: 3c19648af8d5ba44884b4c57a79b277f, type: 3}
       propertyPath: m_TagString
       value: Trash
       objectReference: {fileID: 0}
@@ -701,7 +713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5473749792742379129, guid: be052e8a891bffb4689e04d0c2b22d6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 5473749792742379129, guid: be052e8a891bffb4689e04d0c2b22d6d, type: 3}
       propertyPath: m_LocalPosition.y
