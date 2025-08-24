@@ -100,32 +100,35 @@ public class DragAndDropHandler : MonoBehaviour
 
 IEnumerator MoveBackToOriginalPosition()
 {
-    float duration = 0.5f;
+    float duration = 0.8f;       // Longer wobble
     float elapsed = 0f;
     Vector3 startPos = transform.position;
 
-    float shakeAmplitude = 0.2f; // How far left and right
-    int shakeFrequency = 8;      // How many full shakes during duration
+    float tiltAngle = 50f;       // Big tilt (try 40–70 for max exaggeration)
+    int tiltFrequency = 5;       // How many back-and-forths during duration
 
     while (elapsed < duration)
     {
         float t = elapsed / duration;
 
-        // Main return movement
+        // Smooth return to original position
         Vector3 smoothPos = Vector3.Lerp(startPos, originalPosition, t);
 
-        // Horizontal "no" shake using sine wave
-        float shakeX = Mathf.Sin(t * Mathf.PI * 2 * shakeFrequency) * shakeAmplitude * (1f - t); // fade out at end
-        Vector3 shakeOffset = new Vector3(shakeX, 0f, 0f);
+        // Big rocking tilt, fades out over time
+        float angle = Mathf.Sin(t * Mathf.PI * 2 * tiltFrequency) * tiltAngle * (1f - t);
 
-        transform.position = smoothPos + shakeOffset;
+        transform.position = smoothPos;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
         elapsed += Time.deltaTime;
         yield return null;
     }
 
+    // Reset clean
     transform.position = originalPosition;
+    transform.rotation = Quaternion.identity;
 }
+
 
 
     void DropItem()
