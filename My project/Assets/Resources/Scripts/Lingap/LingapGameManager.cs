@@ -76,8 +76,23 @@ public class LingapGameManager : MonoBehaviour
 
             Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
 
+            Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
+            Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
+            Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
+
+            Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
+
             ButtonLookingFor = continueButtonGO.gameObject;
             levelmanagerunlock.continueButton = continueButtonGO.gameObject;
+            levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
+            levelmanagerunlock.stars = new Transform[]
+            {
+                FindChild(CreatedAreaUI.transform, "Star-1"),
+                FindChild(CreatedAreaUI.transform, "Star-2"),
+                FindChild(CreatedAreaUI.transform, "Star-3")
+            };
+
+
 
             // Add onClick listener
             Button continueButton = continueButtonGO.GetComponent<Button>();

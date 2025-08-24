@@ -406,7 +406,7 @@ MonoBehaviour:
     sa bahay.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e70003ca75afb5a42ae9b47c9a59784c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2663289290347654213, guid: e70003ca75afb5a42ae9b47c9a59784c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15764,6 +15764,9 @@ MonoBehaviour:
   - {fileID: 4342159048642983395}
   areaLoader: {fileID: 1755220468}
   continueButton: {fileID: 0}
+  stars: []
+  starDelay: 0.5
+  popTime: 0.3
   unlockedLevelIndex: 0
 --- !u!114 &1755220470
 MonoBehaviour:
