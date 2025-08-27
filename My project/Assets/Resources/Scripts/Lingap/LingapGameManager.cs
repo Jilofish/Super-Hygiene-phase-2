@@ -109,21 +109,21 @@ public class LingapGameManager : MonoBehaviour
 
 
 
-    // Instantiate level buttons and assign OnClick listeners
-    for (int i = 0; i < 6; i++)
-    {
-        int index = i;
-        Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
-        GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
-        Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
+    // // Instantiate level buttons and assign OnClick listeners
+    // for (int i = 0; i < 6; i++)
+    // {
+    //     int index = i;
+    //     Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
+    //     GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
+    //     Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
         
 
-        // Add the task UI activation
-        levelButtonInstance.onClick.AddListener(() =>
-        {
-            arealoader.taskUIContainer.SetActive(true);
-        });
-    }
+    //     // Add the task UI activation
+    //     levelButtonInstance.onClick.AddListener(() =>
+    //     {
+    //         arealoader.taskUIContainer.SetActive(true);
+    //     });
+    // }
 
         for (int h=0; h<6; h++)
         {
@@ -229,15 +229,11 @@ public class LingapGameManager : MonoBehaviour
                 ShirtSpawnInt.SetActive(true);
             });
             ProceedButtonFolding.onClick.AddListener(SFM.FoldingComplete);
-
             Transform ShirtSpawner = FindChild(ShirtSpawnInt.transform,"Shirt Spawner");
             LingapShirtSpawner Lingap = ShirtSpawner.gameObject.GetComponent<LingapShirtSpawner>();
             Lingap.ResetShirtStack();
         }
-
     }
-
-
     private Transform FindChild( Transform parent, string FindName)
     {
         foreach (Transform child in parent)

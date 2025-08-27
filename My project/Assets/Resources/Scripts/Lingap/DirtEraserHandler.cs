@@ -12,13 +12,16 @@ public class DirtEraserHandler : MonoBehaviour
     public Texture2D brushTexture;
     public Material eraseMaterial;
 
+    [Header("Sponge Reference")]
+    public GameObject sponge; // assign sponge GameObject in inspector
+
     private Camera cam;
     private SpriteRenderer spriteRenderer;
     private bool isErasing = false;
 
     private bool hasCompleted = false;
 
-    void Awake()
+   void Awake()
     {
         cam = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -26,47 +29,33 @@ public class DirtEraserHandler : MonoBehaviour
 
     void Start()
     {
-        // Clear the mask texture to black at the beginning
         RenderTexture.active = maskTexture;
         GL.Clear(true, true, Color.black);
         RenderTexture.active = null;
     }
+
     void Update()
     {
-        if (!isErasing)
+        if (sponge == null) return;
+
+        // Check if sponge is overlapping this dirt
+        Collider2D spongeCol = sponge.GetComponent<Collider2D>();
+        Collider2D myCol = GetComponent<Collider2D>();
+
+        if (spongeCol != null && myCol != null && spongeCol.bounds.Intersects(myCol.bounds))
         {
-            // Detect first touch or click on this object
-            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+            Vector2 worldPos = sponge.transform.position;
+            Vector2 uv = WorldToUV(worldPos);
+
+            if (uv.x >= 0 && uv.x <= 1 && uv.y >= 0 && uv.y <= 1)
             {
-                Vector2 touchPos = cam.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue());
-                TryStartErasing(touchPos);
-            }
-            else if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                Vector2 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                TryStartErasing(mousePos);
+                DrawBrush(uv);
             }
         }
-        else
+
+        if (!hasCompleted && CheckEraseThreshold(0.70f))
         {
-            // Continue drawing brush only if actively touching/clicking
-            Vector2? input = GetActiveInputPosition();
-            if (input.HasValue)
-            {
-                Vector2 worldPos = cam.ScreenToWorldPoint(input.Value);
-                Vector2 uv = WorldToUV(worldPos);
-
-                if (uv.x >= 0 && uv.x <= 1 && uv.y >= 0 && uv.y <= 1)
-                {
-                    DrawBrush(uv);
-                }
-            }
-
-            // Optionally check for full erase (not required, can destroy manually)
-            if (!hasCompleted && CheckEraseThreshold(0.70f)) // 90% erased
-            {
-                DoAction();
-            }
+            DoAction();
         }
     }
 

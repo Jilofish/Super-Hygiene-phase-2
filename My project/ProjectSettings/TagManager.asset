@@ -10,6 +10,7 @@ TagManager:
   - Trash
   - Clothes
   - ClothesBin
+  - Sponge
   layers:
   - Default
   - TransparentFX
