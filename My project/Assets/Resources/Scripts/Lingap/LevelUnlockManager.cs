@@ -21,6 +21,9 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] private float starDelay = 0.5f;
     [SerializeField] private float popTime = 0.3f;
 
+    [Header("Audio")]
+    [SerializeField] public AudioSource StarSFX;   // 🎵 Drag your star sound here
+
     [Header("Tracking")]
     [SerializeField] private int unlockedLevelIndex = 0;
 
@@ -100,10 +103,17 @@ public class LevelUnlockManager : MonoBehaviour
         }
     }
 
-
     private IEnumerator PopStar(Transform star)
     {
         float elapsed = 0f;
+
+        // 🔊 Play SFX when this star starts popping
+        if (StarSFX != null)
+        {
+            // Slight pitch randomization so each star sounds fresh
+            StarSFX.pitch = Random.Range(0.95f, 1.05f);
+            StarSFX.Play();
+        }
 
         // Grow star (pop effect)
         while (elapsed < popTime)
@@ -150,7 +160,6 @@ public class LevelUnlockManager : MonoBehaviour
             Debug.Log("🎉 All levels completed. Waiting for future content.");
         }
     }
-
 
     private void UpdateButtonStates()
     {

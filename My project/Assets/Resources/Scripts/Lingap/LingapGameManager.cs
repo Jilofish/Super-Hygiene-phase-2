@@ -69,43 +69,53 @@ public class LingapGameManager : MonoBehaviour
         CreatedAreaUI = Instantiate(areaui, uimanagement.CanvasTransform, false);
         CreatedAreaUI.transform.SetSiblingIndex(0);
         if (CreatedAreaUI != null)
+{
+    Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
+    arealoader.taskUIContainer = CreatedAreaUI.gameObject;
+    arealoader.AreaTaskChecker = AreaTask;
+
+    Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
+
+    Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
+    Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
+    Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
+
+    Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
+
+    ButtonLookingFor = continueButtonGO.gameObject;
+    levelmanagerunlock.continueButton = continueButtonGO.gameObject;
+    levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
+    levelmanagerunlock.stars = new Transform[]
+    {
+        star1GO,
+        star2GO,
+        star3GO
+    };
+
+    // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
+    AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
+    if (starSFX != null)
+    {
+        levelmanagerunlock.StarSFX = starSFX;
+    }
+    else
+    {
+        Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
+    }
+
+    // Add onClick listener
+    Button continueButton = continueButtonGO.GetComponent<Button>();
+    if (continueButton != null)
+    {
+        continueButton.onClick.AddListener(() =>
         {
-            Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
-            arealoader.taskUIContainer = CreatedAreaUI.gameObject;
-            arealoader.AreaTaskChecker = AreaTask;
+            levelmanagerunlock.OnContinueButtonClicked();
+            levelmanagerunlock.DisableCurrentAreaGroup();
+            taskpoints.PlayEndingCutscene();
+        });
+    }
+}
 
-            Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
-
-            Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
-            Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
-            Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
-
-            Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
-
-            ButtonLookingFor = continueButtonGO.gameObject;
-            levelmanagerunlock.continueButton = continueButtonGO.gameObject;
-            levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
-            levelmanagerunlock.stars = new Transform[]
-            {
-                FindChild(CreatedAreaUI.transform, "Star-1"),
-                FindChild(CreatedAreaUI.transform, "Star-2"),
-                FindChild(CreatedAreaUI.transform, "Star-3")
-            };
-
-
-
-            // Add onClick listener
-            Button continueButton = continueButtonGO.GetComponent<Button>();
-            if (continueButton != null)
-            {
-                continueButton.onClick.AddListener(() =>
-                {
-                    levelmanagerunlock.OnContinueButtonClicked();
-                    levelmanagerunlock.DisableCurrentAreaGroup();
-                    taskpoints.PlayEndingCutscene();
-                });
-            }
-        }
 
 
 
