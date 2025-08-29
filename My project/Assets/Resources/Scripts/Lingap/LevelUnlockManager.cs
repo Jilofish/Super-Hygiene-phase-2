@@ -13,8 +13,6 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] public GameObject LevelSelector; // messages for each level
     [SerializeField] public CutsceneTransitionManager cutsceneTransitionManager; // messages for each level
 
-
-
     [Header("Area Loader Reference")]
     [SerializeField] private AreaLoader areaLoader;
 
@@ -57,6 +55,8 @@ public class LevelUnlockManager : MonoBehaviour
     {
         if (index != unlockedLevelIndex)
         {
+             // 🔹 Trigger shake on the locked button
+            StartCoroutine(ShakeButton(levelButtons[index].GetComponent<RectTransform>()));
             Debug.LogWarning($"⚠️ Level {index + 1} is locked.");
             return;
         }
@@ -174,6 +174,22 @@ public class LevelUnlockManager : MonoBehaviour
         {
             Debug.Log("🎉 All levels completed. Waiting for future content.");
         }
+    }
+    private IEnumerator ShakeButton(RectTransform button, float duration = 0.2f, float magnitude = 10f)
+    {
+        Vector3 originalPos = button.localPosition;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            button.localPosition = originalPos + new Vector3(x, 0f, 0f);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        button.localPosition = originalPos;
     }
     public void DisableCurrentAreaGroup()
     {
