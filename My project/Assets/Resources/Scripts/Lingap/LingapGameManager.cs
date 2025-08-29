@@ -21,7 +21,7 @@ public class LingapGameManager : MonoBehaviour
     public CutsceneTransitionManager taskpoints;
     public LingapUIManagement uimanagement;
     public PlayCustsceneAudio playaudio;
-    
+
     public GameObject CreatedAreaUI;
     public GameObject ButtonLookingFor;
     public GameObject AreaGroup3;
@@ -102,6 +102,7 @@ public class LingapGameManager : MonoBehaviour
                 {
                     levelmanagerunlock.OnContinueButtonClicked();
                     levelmanagerunlock.DisableCurrentAreaGroup();
+                    levelmanagerunlock.UpdateLevelIndicatorUI();
                     taskpoints.PlayEndingCutscene();
                 });
             }
@@ -116,7 +117,7 @@ public class LingapGameManager : MonoBehaviour
     //     Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
     //     GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
     //     Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
-        
+
 
     //     // Add the task UI activation
     //     levelButtonInstance.onClick.AddListener(() =>
@@ -144,7 +145,7 @@ public class LingapGameManager : MonoBehaviour
                 ChairmoveComp.chairMoveManager = GetComponent<ChairMoveManager>();
             }
         }
-        
+
         Button ButtonMG1 = Instantiate(ProceedButtonMG1,uimanagement.CanvasTransform,false);
         GameObject FaucetMini1 = Instantiate(FaucetMinigame1);
         FaucetMinigame1 = FaucetMini1;
@@ -178,7 +179,7 @@ public class LingapGameManager : MonoBehaviour
                 Debug.LogError("FaucetHandleController is NULL! Check if"+ FH1Ref.name +  "has the component attached.");
             }
         }
-        
+
         Button ButtonMG2 = Instantiate(ProceedButtonMG2,uimanagement.CanvasTransform,false);
         GameObject FaucetMini2 = Instantiate(FaucetMinigame2);
         FaucetMinigame2 = FaucetMini2;

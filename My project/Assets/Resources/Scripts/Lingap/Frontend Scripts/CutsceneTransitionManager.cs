@@ -12,8 +12,8 @@ public class CutsceneTransitionManager : MonoBehaviour
     [SerializeField] private GameObject[] startCutscene2Objects;
     [SerializeField] private GameObject[] endingCutsceneObjects;
 
-    [Header("Backgrounds (Optional)")]
-    [SerializeField] private GameObject[] levelBackgroundObjects;
+    [Header("Cutscene Objects")]
+    [SerializeField] private GameObject[] CutsceneObjects;
 
     [Header("Task Areas")]
     [SerializeField] public GameObject[] taskEntryPoints;
@@ -25,7 +25,6 @@ public class CutsceneTransitionManager : MonoBehaviour
 
     private GameObject activeStartCutscene;
     private GameObject activeEndingCutscene;
-    private GameObject activeBackground;
 
     // Called when player selects a level
     public void OnLevelSelected(int index)
@@ -36,7 +35,6 @@ public class CutsceneTransitionManager : MonoBehaviour
         startCutscenePanel.SetActive(true);
         ClearStartCutscene();
 
-        SetBackground(index);
 
         // Show StartCutscene 1
         if (index >= 0 && index < startCutscene1Objects.Length)
@@ -102,7 +100,6 @@ public class CutsceneTransitionManager : MonoBehaviour
 
             startCutscenePanel.SetActive(true);
             ClearStartCutscene();
-            SetBackground(nextLevel);
 
             activeStartCutscene = startCutscene1Objects[nextLevel];
             activeStartCutscene.SetActive(true);
@@ -131,16 +128,12 @@ public class CutsceneTransitionManager : MonoBehaviour
             activeEndingCutscene = null;
         }
     }
-
-    public void SetBackground(int levelIndex)
+    public void OpenCutsceneObjects(int index)
     {
-        if (activeBackground != null)
-            activeBackground.SetActive(false);
-
-        if (levelIndex >= 0 && levelIndex < levelBackgroundObjects.Length)
+        if (index >= 0 && index < CutsceneObjects.Length)
         {
-            activeBackground = levelBackgroundObjects[levelIndex];
-            activeBackground.SetActive(true);
+            CutsceneObjects[index].SetActive(true);
         }
     }
+    
 }
