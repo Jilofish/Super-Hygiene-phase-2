@@ -229,6 +229,12 @@ public class LingapGameManager : MonoBehaviour
                 AreaGroup5.SetActive(true);
                 ShirtSpawnInt.SetActive(true);
             });
+            Transform CloseFoldingGame = FindChild(ShirtSpawnInt.transform,"CloseButton");
+            Button CloseFoldingGameButton = CloseFoldingGame.gameObject.GetComponent<Button>();
+            CloseFoldingGameButton.onClick.AddListener(() =>
+            {
+                AreaGroup5.SetActive(true);
+            });
             ProceedButtonFolding.onClick.AddListener(SFM.FoldingComplete);
             Transform ShirtSpawner = FindChild(ShirtSpawnInt.transform,"Shirt Spawner");
             LingapShirtSpawner Lingap = ShirtSpawner.gameObject.GetComponent<LingapShirtSpawner>();

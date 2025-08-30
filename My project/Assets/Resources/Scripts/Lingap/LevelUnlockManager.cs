@@ -53,14 +53,13 @@ public class LevelUnlockManager : MonoBehaviour
 
     public void OnLevelButtonClicked(int index)
     {
-        if (index != unlockedLevelIndex)
+        if (index != unlockedLevelIndex && index != 4)
         {
-             // 🔹 Trigger shake on the locked button
             StartCoroutine(ShakeButton(levelButtons[index].GetComponent<RectTransform>()));
             Debug.LogWarning($"⚠️ Level {index + 1} is locked.");
             return;
         }
-        else if (index == unlockedLevelIndex)
+        else if (index == unlockedLevelIndex || index == 4)
         {
             Debug.Log($"➡️ Loading Level {index + 1}");
             LevelSelector.SetActive(false);
