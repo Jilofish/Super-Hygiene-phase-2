@@ -1502,7 +1502,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 5a101c981bc21bb4b858d2f725144214, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 873674139}
-    audioClip: {fileID: 8300000, guid: 81d8bfc2ba691094f8695249f21c6362, type: 3}
+    audioClip: {fileID: 8300000, guid: a33e33455a42b9343af9aec0e9281807, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 940057797}
     audioClip: {fileID: 8300000, guid: 82b1d19b1e14ea54c93944fd073dcdba, type: 3}
@@ -1514,7 +1514,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 20a00a5562d2ff24da40a080ff6cfb3a, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 1109828929}
-    audioClip: {fileID: 8300000, guid: c7c97362062b12a489f5ff212b119cbc, type: 3}
+    audioClip: {fileID: 8300000, guid: 865bf14c095a9b246922962c29e04132, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 1884045015018916063}
     audioClip: {fileID: 8300000, guid: db399bf271282f244a6800805803d9a0, type: 3}
@@ -15764,9 +15764,11 @@ MonoBehaviour:
   - {fileID: 4342159048642983395}
   areaLoader: {fileID: 1755220468}
   continueButton: {fileID: 0}
+  blackOverlay: {fileID: 0}
   stars: []
   starDelay: 0.5
   popTime: 0.3
+  StarSFX: {fileID: 0}
   unlockedLevelIndex: 0
 --- !u!114 &1755220470
 MonoBehaviour:
