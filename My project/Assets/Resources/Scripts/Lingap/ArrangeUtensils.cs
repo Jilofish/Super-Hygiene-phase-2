@@ -13,13 +13,7 @@ public class ArrangeUtensils : MonoBehaviour
     [SerializeField] private Transform targetPosition; // drag Plate 1 here
     [SerializeField] private float moveSpeed = 5f;
 
-    [Header("Wrong Order Feedback")]
-    [SerializeField] private float tiltAngle = 15f;      // how much to tilt
-    [SerializeField] private float tiltSpeed = 8f;       // how fast the tilt animates
-    [SerializeField] private int tiltCount = 2;          // number of tilts
-
     private Camera cam;
-    private bool isTilting = false;
 
     void Awake()
     {
@@ -74,8 +68,6 @@ public class ArrangeUtensils : MonoBehaviour
         else
         {
             Debug.LogWarning($"Tapped out of order: {objectType}");
-            if (!isTilting)
-                StartCoroutine(TiltFeedback());
         }
     }
 
@@ -101,37 +93,4 @@ public class ArrangeUtensils : MonoBehaviour
         transform.position = end; // snap exactly to final
     }
 
-    private IEnumerator TiltFeedback()
-    {
-        isTilting = true;
-        Quaternion originalRot = transform.rotation;
-
-        for (int i = 0; i < tiltCount; i++)
-        {
-            // tilt right
-            yield return RotateTo(Quaternion.Euler(0, 0, tiltAngle));
-            // tilt left
-            yield return RotateTo(Quaternion.Euler(0, 0, -tiltAngle));
-        }
-
-        // reset
-        yield return RotateTo(originalRot);
-
-        isTilting = false;
-    }
-
-    private IEnumerator RotateTo(Quaternion targetRot)
-    {
-        Quaternion startRot = transform.rotation;
-        float t = 0f;
-
-        while (t < 1f)
-        {
-            t += Time.deltaTime * tiltSpeed;
-            transform.rotation = Quaternion.Lerp(startRot, targetRot, t);
-            yield return null;
-        }
-
-        transform.rotation = targetRot;
-    }
 }
