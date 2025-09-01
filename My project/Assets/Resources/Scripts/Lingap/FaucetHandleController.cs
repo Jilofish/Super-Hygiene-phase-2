@@ -36,11 +36,20 @@ public class FaucetHandleController : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
-        HandleMouse();
-#else
-        HandleTouch();
-#endif
+        if (Touchscreen.current != null && 
+            (Touchscreen.current.primaryTouch.press.isPressed ||
+            Touchscreen.current.primaryTouch.press.wasPressedThisFrame ||
+            Touchscreen.current.primaryTouch.press.wasReleasedThisFrame))
+        {
+            HandleTouch();
+        }
+        else if (Mouse.current != null &&
+                (Mouse.current.leftButton.wasPressedThisFrame ||
+                Mouse.current.leftButton.isPressed ||
+                Mouse.current.leftButton.wasReleasedThisFrame))
+        {
+            HandleMouse();
+        }
     }
     void HandleMouse()
     {

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      toy-box-g_0: -25369855585222404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

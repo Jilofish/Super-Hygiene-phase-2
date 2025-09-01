@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5226399850213717808}
   - component: {fileID: 2786205432759913389}
   - component: {fileID: 3867638973216727445}
-  - component: {fileID: 3588895360493984613}
   m_Layer: 0
   m_Name: Pillow 2
   m_TagString: Untagged
@@ -135,16 +134,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.81}
   m_EdgeRadius: 0
---- !u!114 &3588895360493984613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5862909863659255249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b533a7177655a547b1e773375f30c3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskID: fix_bed

@@ -8,11 +8,12 @@ public class AreaLoader : MonoBehaviour
 
     [Header("Current Area Settings")]
     [SerializeField] private AreaConfig areaConfig;
-    [SerializeField] public string areaID; // assign AreaTaskChecker scriptable object
+    public string areaID; 
     [Header("UI Prefabs")]
-    [SerializeField] public Transform taskUIContainer; // assign AreaTaskChecker
-    [SerializeField] public TaskUIItem taskUIPrefab;   // assign TaskUIItem prefab
-    [SerializeField] public AreaConfig[] areaConfigs;
+    public GameObject taskUIContainer;
+    public Transform AreaTaskChecker;
+    public TaskUIItem taskUIPrefab;
+    public AreaConfig[] areaConfigs;
     [SerializeField] private LevelUnlockManager levelUnlockManager;
     public void LoadArea(int areaIndex)
     {
@@ -21,7 +22,6 @@ public class AreaLoader : MonoBehaviour
             Debug.LogError($"Invalid area index: {areaIndex}");
             return;
         }
-
         areaConfig = areaConfigs[areaIndex];
         LoadArea();
     }
@@ -32,7 +32,7 @@ public class AreaLoader : MonoBehaviour
 
         // Activate only the selected area
         foreach (GameObject area in areaGroups)
-            area.SetActive(area.name == areaID);
+            area.SetActive(area.name == areaID+"(Clone)");
 
         TaskManager.Instance.SetCurrentArea(areaID);
 
@@ -40,11 +40,10 @@ public class AreaLoader : MonoBehaviour
         foreach (var task in areaConfig.tasks)
         {
             TaskManager.Instance.RegisterTask(task.taskID, task.goalCount);
-
-            // Instantiate UI item
-            TaskUIItem uiItem = Instantiate(taskUIPrefab, taskUIContainer);
+            TaskUIItem uiItem = Instantiate(taskUIPrefab, AreaTaskChecker,false);
             uiItem.taskID = task.taskID;
             uiItem.SetCustomDescription(task.description);
+            Debug.Log("Instantiate UI item");
         }
 
         TaskManager.Instance.LoadProgress();

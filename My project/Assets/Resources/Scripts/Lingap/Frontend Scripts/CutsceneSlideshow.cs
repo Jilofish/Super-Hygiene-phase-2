@@ -26,8 +26,6 @@ void Start()
 {
     InitiateSlides();
 }
-
-
     public void InitiateSlides()
     {
         StartCoroutine(PlaySlideshow());
@@ -62,6 +60,9 @@ void Start()
         if (sceneChanger != null && !string.IsNullOrEmpty(nextSceneName))
         {
             sceneChanger.ChangeScene(nextSceneName);
+            if(nextSceneName == "Title"){
+                Destroy(TaskManager.Instance.gameObject);
+            }
         }
     }
 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      laundrybucket-g_0: -7739990384893896099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

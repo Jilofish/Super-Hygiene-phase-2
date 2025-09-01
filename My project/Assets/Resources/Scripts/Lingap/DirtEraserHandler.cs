@@ -59,14 +59,12 @@ public class DirtEraserHandler : MonoBehaviour
                 if (uv.x >= 0 && uv.x <= 1 && uv.y >= 0 && uv.y <= 1)
                 {
                     DrawBrush(uv);
-                    Debug.Log($"[Brush] Erasing at UV {uv}");
                 }
             }
 
             // Optionally check for full erase (not required, can destroy manually)
-            if (!hasCompleted && CheckEraseThreshold(0.9f)) // 90% erased
+            if (!hasCompleted && CheckEraseThreshold(0.70f)) // 90% erased
             {
-                Debug.Log("[Brush] Sprite erased enough. Triggering DoAction().");
                 DoAction();
             }
         }
@@ -74,10 +72,11 @@ public class DirtEraserHandler : MonoBehaviour
 
     void TryStartErasing(Vector2 worldPos)
     {
+        // Draw a small ray for 1 second for visualization
+        Debug.DrawRay(worldPos, Vector2.up * 0.1f, Color.red, 1f);
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            Debug.Log("[Input] Object tapped. Starting erasing.");
             isErasing = true;
         }
     }
@@ -96,31 +95,30 @@ public class DirtEraserHandler : MonoBehaviour
     void DrawBrush(Vector2 uv)
     {
         if (brushTexture == null || eraseMaterial == null)
-    {
-        Debug.LogWarning("Brush or eraseMaterial is null!");
-        return;
-    }
+        {
+            return;
+        }
 
-    RenderTexture.active = maskTexture;
+        // Temporary RT (copy current mask)
+        RenderTexture temp = RenderTexture.GetTemporary(maskTexture.width, maskTexture.height, 0, maskTexture.format);
+        Graphics.Blit(maskTexture, temp);
 
-    GL.PushMatrix();
-    GL.LoadPixelMatrix(0, maskTexture.width, 0, maskTexture.height);
+        // Pass brush data to material
+        eraseMaterial.SetTexture("_BrushTex", brushTexture);
 
-    Rect rect = new Rect(
-        uv.x * maskTexture.width - brushTexture.width / 2,
-        uv.y * maskTexture.height - brushTexture.height / 2,
-        brushTexture.width,
-        brushTexture.height
-    );
+        // BrushUV = (center, sizeRatio)
+        float margin = 1.2f; // scale brush 20% larger
+        float brushScaleX = brushTexture.width / (float)maskTexture.width;
+        float brushScaleY = brushTexture.height / (float)maskTexture.height;
+        eraseMaterial.SetVector("_BrushUV", new Vector4(uv.x, uv.y, brushScaleX, brushScaleY));
 
-    Graphics.DrawTexture(rect, brushTexture, eraseMaterial);
-
-    GL.PopMatrix();
-    RenderTexture.active = null;
-
-    Debug.Log($"[Brush] Drew at UV {uv}");
+        // Blend into mask
+        Graphics.Blit(temp, maskTexture, eraseMaterial);
+        RenderTexture.ReleaseTemporary(temp);
 
     }
+
+
 
     Vector2 WorldToUV(Vector2 worldPos)
     {
@@ -165,17 +163,17 @@ public class DirtEraserHandler : MonoBehaviour
         RenderTexture.active = null;
 
         Color[] pixels = readTex.GetPixels();
+
         float whitePixels = 0;
 
         foreach (Color c in pixels)
         {
-            if (c.r > 0.9f) whitePixels += 1f;
+            if (c.r > 0.5f) whitePixels += 1f;
         }
 
         float percentWhite = whitePixels / pixels.Length;
         Destroy(readTex);
 
-        Debug.Log($"[CheckErase] White: {percentWhite:P1}");
 
         return percentWhite >= threshold;
     }

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class ChairMove : MonoBehaviour
 {
     [SerializeField] private string taskID;
-    [SerializeField] private ChairMoveManager chairMoveManager;
+    [SerializeField] public ChairMoveManager chairMoveManager;
     private Camera cam;
 
     void Awake()

@@ -16,7 +16,9 @@ public class CutsceneTransitionManager : MonoBehaviour
     [SerializeField] private GameObject[] levelBackgroundObjects;
 
     [Header("Task Areas")]
-    [SerializeField] private GameObject[] taskEntryPoints;
+    [SerializeField] public GameObject[] taskEntryPoints;
+
+    public GameObject CurrentTaskEntryPoints;
 
     private int currentLevelIndex = -1;
     private int currentStartSceneIndex = 0;
@@ -62,7 +64,6 @@ public class CutsceneTransitionManager : MonoBehaviour
         }
         else
         {
-            // End of cutscene → show Area
             ClearStartCutscene();
             startCutscenePanel.SetActive(false);
 

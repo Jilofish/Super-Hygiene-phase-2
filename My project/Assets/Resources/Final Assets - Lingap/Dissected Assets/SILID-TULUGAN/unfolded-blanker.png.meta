@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      unfolded-blanker_0: -2219745434138266891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
