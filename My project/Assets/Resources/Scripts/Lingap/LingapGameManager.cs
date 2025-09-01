@@ -21,7 +21,7 @@ public class LingapGameManager : MonoBehaviour
     public CutsceneTransitionManager taskpoints;
     public LingapUIManagement uimanagement;
     public PlayCustsceneAudio playaudio;
-
+    
     public GameObject CreatedAreaUI;
     public GameObject ButtonLookingFor;
     public GameObject AreaGroup3;
@@ -69,72 +69,71 @@ public class LingapGameManager : MonoBehaviour
         CreatedAreaUI = Instantiate(areaui, uimanagement.CanvasTransform, false);
         CreatedAreaUI.transform.SetSiblingIndex(0);
         if (CreatedAreaUI != null)
+{
+    Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
+    arealoader.taskUIContainer = CreatedAreaUI.gameObject;
+    arealoader.AreaTaskChecker = AreaTask;
+
+    Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
+
+    Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
+    Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
+    Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
+
+    Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
+
+    ButtonLookingFor = continueButtonGO.gameObject;
+    levelmanagerunlock.continueButton = continueButtonGO.gameObject;
+    levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
+    levelmanagerunlock.stars = new Transform[]
+    {
+        star1GO,
+        star2GO,
+        star3GO
+    };
+
+    // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
+    AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
+    if (starSFX != null)
+    {
+        levelmanagerunlock.StarSFX = starSFX;
+    }
+    else
+    {
+        Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
+    }
+
+    // Add onClick listener
+    Button continueButton = continueButtonGO.GetComponent<Button>();
+    if (continueButton != null)
+    {
+        continueButton.onClick.AddListener(() =>
         {
-            Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
-            arealoader.taskUIContainer = CreatedAreaUI.gameObject;
-            arealoader.AreaTaskChecker = AreaTask;
-
-            Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
-
-            Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
-            Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
-            Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
-
-            Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
-
-            ButtonLookingFor = continueButtonGO.gameObject;
-            levelmanagerunlock.continueButton = continueButtonGO.gameObject;
-            levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
-            levelmanagerunlock.stars = new Transform[]
-            {
-                star1GO,
-                star2GO,
-                star3GO
-            };
-
-            // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
-            AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
-            if (starSFX != null)
-            {
-                levelmanagerunlock.StarSFX = starSFX;
-            }
-            else
-            {
-                Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
-            }
-
-
-            // Add onClick listener
-            Button continueButton = continueButtonGO.GetComponent<Button>();
-            if (continueButton != null)
-            {
-                continueButton.onClick.AddListener(() =>
-                {
-                    levelmanagerunlock.OnContinueButtonClicked();
-                    levelmanagerunlock.DisableCurrentAreaGroup();
-                    levelmanagerunlock.UpdateLevelIndicatorUI();
-                    taskpoints.PlayEndingCutscene();
-                });
-            }
-        }
+            levelmanagerunlock.OnContinueButtonClicked();
+            levelmanagerunlock.DisableCurrentAreaGroup();
+            taskpoints.PlayEndingCutscene();
+        });
+    }
+}
 
 
 
-    // // Instantiate level buttons and assign OnClick listeners
-    // for (int i = 0; i < 6; i++)
-    // {
-    //     int index = i;
-    //     Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
-    //     GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
-    //     Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
 
+    // Instantiate level buttons and assign OnClick listeners
+    for (int i = 0; i < 6; i++)
+    {
+        int index = i;
+        Transform LevelCutscenes = FindChild(uimanagement.CanvasTransform, "Level Cutscenes");
+        GameObject LevelCutscenesGO = LevelCutscenes.gameObject;
+        Button levelButtonInstance = FindChild(LevelCutscenesGO.transform, "Area " + (index + 1) + " Button").gameObject.GetComponent<Button>();
+        
 
-    //     // Add the task UI activation
-    //     levelButtonInstance.onClick.AddListener(() =>
-    //     {
-    //         arealoader.taskUIContainer.SetActive(true);
-    //     });
-    // }
+        // Add the task UI activation
+        levelButtonInstance.onClick.AddListener(() =>
+        {
+            arealoader.taskUIContainer.SetActive(true);
+        });
+    }
 
         for (int h=0; h<6; h++)
         {
@@ -155,7 +154,7 @@ public class LingapGameManager : MonoBehaviour
                 ChairmoveComp.chairMoveManager = GetComponent<ChairMoveManager>();
             }
         }
-
+        
         Button ButtonMG1 = Instantiate(ProceedButtonMG1,uimanagement.CanvasTransform,false);
         GameObject FaucetMini1 = Instantiate(FaucetMinigame1);
         FaucetMinigame1 = FaucetMini1;
@@ -189,7 +188,7 @@ public class LingapGameManager : MonoBehaviour
                 Debug.LogError("FaucetHandleController is NULL! Check if"+ FH1Ref.name +  "has the component attached.");
             }
         }
-
+        
         Button ButtonMG2 = Instantiate(ProceedButtonMG2,uimanagement.CanvasTransform,false);
         GameObject FaucetMini2 = Instantiate(FaucetMinigame2);
         FaucetMinigame2 = FaucetMini2;
@@ -239,18 +238,16 @@ public class LingapGameManager : MonoBehaviour
                 AreaGroup5.SetActive(true);
                 ShirtSpawnInt.SetActive(true);
             });
-            Transform CloseFoldingGame = FindChild(ShirtSpawnInt.transform,"CloseButton");
-            Button CloseFoldingGameButton = CloseFoldingGame.gameObject.GetComponent<Button>();
-            CloseFoldingGameButton.onClick.AddListener(() =>
-            {
-                AreaGroup5.SetActive(true);
-            });
             ProceedButtonFolding.onClick.AddListener(SFM.FoldingComplete);
+
             Transform ShirtSpawner = FindChild(ShirtSpawnInt.transform,"Shirt Spawner");
             LingapShirtSpawner Lingap = ShirtSpawner.gameObject.GetComponent<LingapShirtSpawner>();
             Lingap.ResetShirtStack();
         }
+
     }
+
+
     private Transform FindChild( Transform parent, string FindName)
     {
         foreach (Transform child in parent)

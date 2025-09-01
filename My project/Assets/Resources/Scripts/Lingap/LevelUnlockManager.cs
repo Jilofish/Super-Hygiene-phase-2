@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +6,6 @@ public class LevelUnlockManager : MonoBehaviour
 {
     [Header("Level Buttons (in order)")]
     [SerializeField] public Button[] levelButtons;
-    [Header("Level Selector UI")]
-    [SerializeField] public Image[] arrowImages; // drag arrow images in Inspector
-    [SerializeField] public TMP_Text DialogText;
-    [SerializeField] public GameObject LevelSelector; // messages for each level
-    [SerializeField] public CutsceneTransitionManager cutsceneTransitionManager; // messages for each level
 
     [Header("Area Loader Reference")]
     [SerializeField] private AreaLoader areaLoader;
@@ -26,15 +20,16 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] public Transform[] stars;   // drag 3 stars in Inspector
     [SerializeField] private float starDelay = 0.5f;
     [SerializeField] private float popTime = 0.3f;
-    [SerializeField] public AudioSource StarSFX;
+
+    [Header("Audio")]
+    [SerializeField] public AudioSource StarSFX;   // 🎵 Drag your star sound here
 
     [Header("Tracking")]
     [SerializeField] private int unlockedLevelIndex = 0;
-    public int CurrentLevel;
-    private string template;
 
     private void Start()
     {
+        UpdateButtonStates();
 
         continueButton.SetActive(false);
         if (blackOverlay != null) blackOverlay.SetActive(false);
@@ -48,38 +43,18 @@ public class LevelUnlockManager : MonoBehaviour
                     s.localScale = Vector3.zero;
             }
         }
-        template = DialogText.text;
-        UpdateLevelIndicatorUI();
     }
 
     public void OnLevelButtonClicked(int index)
     {
-        if (index != unlockedLevelIndex)
-        {
-            StartCoroutine(ShakeButton(levelButtons[index].GetComponent<RectTransform>()));
-            Debug.LogWarning($"⚠️ Level {index + 1} is locked.");
-            return;
-        }
-        else if (index == unlockedLevelIndex)
-        {
-            Debug.Log($"➡️ Loading Level {index + 1}");
-            LevelSelector.SetActive(false);
-            cutsceneTransitionManager.OnLevelSelected(index);
-            cutsceneTransitionManager.OpenCutsceneObjects(index);
-            areaLoader.taskUIContainer.SetActive(true);
-            DisableCurrentAreaGroup();
-        }
-        else
-        {
-            Debug.LogError($"❌ Invalid level index: {index}");
-            return;
-        }
+        areaLoader.LoadArea(index);
     }
 
     private void OnEnable()
     {
         StartCoroutine(WaitForAreaReady());
     }
+
     private IEnumerator WaitForAreaReady()
     {
         while (TaskManager.Instance == null || !TaskManager.Instance.IsAreaReady())
@@ -127,13 +102,19 @@ public class LevelUnlockManager : MonoBehaviour
             yield return new WaitForSeconds(starDelay);
         }
     }
+
     private IEnumerator PopStar(Transform star)
     {
         float elapsed = 0f;
-        if (StarSFX != null) {
-        StarSFX.pitch = Random.Range(0.95f, 1.05f);
-        StarSFX.Play();
-    }
+
+        // 🔊 Play SFX when this star starts popping
+        if (StarSFX != null)
+        {
+            // Slight pitch randomization so each star sounds fresh
+            StarSFX.pitch = Random.Range(0.95f, 1.05f);
+            StarSFX.Play();
+        }
+
         // Grow star (pop effect)
         while (elapsed < popTime)
         {
@@ -171,6 +152,7 @@ public class LevelUnlockManager : MonoBehaviour
         if (unlockedLevelIndex < levelButtons.Length - 1)
         {
             unlockedLevelIndex++;
+            UpdateButtonStates();
             Debug.Log($"🔓 Next level unlocked: Level {unlockedLevelIndex + 1}");
         }
         else
@@ -178,22 +160,29 @@ public class LevelUnlockManager : MonoBehaviour
             Debug.Log("🎉 All levels completed. Waiting for future content.");
         }
     }
-    private IEnumerator ShakeButton(RectTransform button, float duration = 0.2f, float magnitude = 10f)
+
+    private void UpdateButtonStates()
     {
-        Vector3 originalPos = button.localPosition;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            float x = Random.Range(-1f, 1f) * magnitude;
-            button.localPosition = originalPos + new Vector3(x, 0f, 0f);
-
-            elapsed += Time.deltaTime;
-            yield return null;
+            if (i < unlockedLevelIndex)
+            {
+                levelButtons[i].interactable = false;
+                levelButtons[i].gameObject.SetActive(false);
+            }
+            else if (i == unlockedLevelIndex)
+            {
+                levelButtons[i].interactable = true;
+                levelButtons[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                levelButtons[i].interactable = false;
+                levelButtons[i].gameObject.SetActive(false);
+            }
         }
-
-        button.localPosition = originalPos;
     }
+
     public void DisableCurrentAreaGroup()
     {
         string currentAreaID = areaLoader.areaID;
@@ -220,21 +209,11 @@ public class LevelUnlockManager : MonoBehaviour
 
         Debug.Log("🧹 Cleared all Task UI items.");
     }
-    public void UpdateLevelIndicatorUI()
-    {
-        CurrentLevel = unlockedLevelIndex + 1;
-        DialogText.text = template.Replace("{level_Index}", CurrentLevel.ToString());
-        // Hide all arrows first
-        foreach (var arrow in arrowImages)
-        {
-            if (arrow != null)
-                arrow.gameObject.SetActive(false);
-        }
-        arrowImages[unlockedLevelIndex].gameObject.SetActive(true);
-    }
+
     public void ResetValues()
     {
         unlockedLevelIndex = 0;
+        UpdateButtonStates();
         continueButton.SetActive(false);
 
         if (blackOverlay != null)
@@ -243,5 +222,4 @@ public class LevelUnlockManager : MonoBehaviour
         ClearTaskUI();
         Debug.Log("🔄 All values have been reset!");
     }
-
 }
