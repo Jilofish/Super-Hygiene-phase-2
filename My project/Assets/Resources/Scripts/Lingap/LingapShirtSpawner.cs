@@ -17,12 +17,12 @@ public class LingapShirtSpawner : MonoBehaviour
     public Sprite image5;
 
     public RectTransform shirtStackParent; // Assign this in the Inspector
-    [SerializeField] private float stackOffsetY = 20f;       // Adjust spacing between stacked shirts
-    [SerializeField] private int stackedShirtCount = 0;
+    private float stackOffsetY = 20f;       // Adjust spacing between stacked shirts
+    private int stackedShirtCount = 0;
 
 
-    [SerializeField] private int currentShirtIndex = 0;
-    [SerializeField] private GameObject activeShirt;
+    private int currentShirtIndex = 0;
+    private GameObject activeShirt;
 
 
    public void SpawnNextShirt()

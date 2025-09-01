@@ -7,6 +7,7 @@ public class TaskManager : MonoBehaviour
     public static TaskManager Instance { get; private set; }
 
     public event Action onTaskUpdated;
+
     private string currentAreaID = "area1";
     private Dictionary<string, Dictionary<string, int>> areaProgress = new();
     private Dictionary<string, Dictionary<string, int>> areaGoals = new();
@@ -17,17 +18,10 @@ public class TaskManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            TriggerReload();
         }
         else
         {
-            Debug.Log("Deleting new GameManager");
-
-            // 🔹 Call LoadGame() on the persistent instance
-            if (Instance != null)
-                Instance.TriggerReload();
-
-            Destroy(gameObject); // Destroy the duplicate
+            Destroy(gameObject);
         }
     }
 
@@ -140,20 +134,5 @@ public class TaskManager : MonoBehaviour
 
         areaProgress = data.areaTaskProgress;
         onTaskUpdated?.Invoke();
-    }
-    public void TriggerReload()
-    {
-        LingapGameManager GM = GetComponent<LingapGameManager>();
-        if (GM != null)
-        {
-            GM.LoadGame();
-        }
-        else
-        {
-            Debug.LogError("Persistent LingapGameManager not found!");
-        }
-        LevelUnlockManager LevelManager = GetComponent<LevelUnlockManager>();
-        LevelManager.ResetValues();
-
     }
 }

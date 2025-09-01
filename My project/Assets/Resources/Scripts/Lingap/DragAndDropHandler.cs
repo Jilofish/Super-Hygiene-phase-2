@@ -21,14 +21,15 @@ public class DragAndDropHandler : MonoBehaviour
     {
         originalPosition = transform.position;
         if (sfxPlayer == null)
-    {
-        sfxPlayer = FindFirstObjectByType<SFXPlayer>();
-    }
+{
+    sfxPlayer = FindObjectOfType<SFXPlayer>();
+}
 
     }
 
     void Update()
     {
+    // Prefer touch if available
         if (Touchscreen.current != null && 
             (Touchscreen.current.primaryTouch.press.isPressed ||
             Touchscreen.current.primaryTouch.press.wasPressedThisFrame ||
@@ -100,35 +101,32 @@ public class DragAndDropHandler : MonoBehaviour
 
 IEnumerator MoveBackToOriginalPosition()
 {
-    float duration = 0.8f;       // Longer wobble
+    float duration = 0.5f;
     float elapsed = 0f;
     Vector3 startPos = transform.position;
 
-    float tiltAngle = 50f;       // Big tilt (try 40–70 for max exaggeration)
-    int tiltFrequency = 5;       // How many back-and-forths during duration
+    float shakeAmplitude = 0.2f; // How far left and right
+    int shakeFrequency = 8;      // How many full shakes during duration
 
     while (elapsed < duration)
     {
         float t = elapsed / duration;
 
-        // Smooth return to original position
+        // Main return movement
         Vector3 smoothPos = Vector3.Lerp(startPos, originalPosition, t);
 
-        // Big rocking tilt, fades out over time
-        float angle = Mathf.Sin(t * Mathf.PI * 2 * tiltFrequency) * tiltAngle * (1f - t);
+        // Horizontal "no" shake using sine wave
+        float shakeX = Mathf.Sin(t * Mathf.PI * 2 * shakeFrequency) * shakeAmplitude * (1f - t); // fade out at end
+        Vector3 shakeOffset = new Vector3(shakeX, 0f, 0f);
 
-        transform.position = smoothPos;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        transform.position = smoothPos + shakeOffset;
 
         elapsed += Time.deltaTime;
         yield return null;
     }
 
-    // Reset clean
     transform.position = originalPosition;
-    transform.rotation = Quaternion.identity;
 }
-
 
 
     void DropItem()
