@@ -26,6 +26,7 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] public Transform[] stars;   // drag 3 stars in Inspector
     [SerializeField] private float starDelay = 0.5f;
     [SerializeField] private float popTime = 0.3f;
+    [SerializeField] public AudioSource StarSFX;
 
     [Header("Tracking")]
     [SerializeField] private int unlockedLevelIndex = 0;
@@ -129,7 +130,10 @@ public class LevelUnlockManager : MonoBehaviour
     private IEnumerator PopStar(Transform star)
     {
         float elapsed = 0f;
-
+        if (StarSFX != null) {
+        StarSFX.pitch = Random.Range(0.95f, 1.05f);
+        StarSFX.Play();
+    }
         // Grow star (pop effect)
         while (elapsed < popTime)
         {

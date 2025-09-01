@@ -87,11 +87,21 @@ public class LingapGameManager : MonoBehaviour
             levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
             levelmanagerunlock.stars = new Transform[]
             {
-                FindChild(CreatedAreaUI.transform, "Star-1"),
-                FindChild(CreatedAreaUI.transform, "Star-2"),
-                FindChild(CreatedAreaUI.transform, "Star-3")
+                star1GO,
+                star2GO,
+                star3GO
             };
 
+            // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
+            AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
+            if (starSFX != null)
+            {
+                levelmanagerunlock.StarSFX = starSFX;
+            }
+            else
+            {
+                Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
+            }
 
 
             // Add onClick listener
