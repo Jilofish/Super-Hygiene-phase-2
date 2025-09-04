@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1014195938268235667}
   - component: {fileID: 4309207303057861557}
   - component: {fileID: -617621558108547376}
-  - component: {fileID: 1246726888136242463}
+  - component: {fileID: 2329021047585699134}
   m_Layer: 0
   m_Name: Spilled Milk
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.91}
   m_EdgeRadius: 0
---- !u!114 &1246726888136242463
+--- !u!114 &2329021047585699134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6061508455396735451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f14010fa674f841b3bf444d4bc0f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: cb3c00c3dcaa51e42a7dcd66d13f9e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskID: wipe_water
+  taskID: 
+  maskTexture: {fileID: 0}
+  brushTexture: {fileID: 0}
+  eraseMaterial: {fileID: 0}
+  sponge: {fileID: 0}
