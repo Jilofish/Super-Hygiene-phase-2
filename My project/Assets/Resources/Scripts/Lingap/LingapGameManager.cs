@@ -20,7 +20,6 @@ public class LingapGameManager : MonoBehaviour
     public ChairMoveManager chairmanager;
     public CutsceneTransitionManager taskpoints;
     public LingapUIManagement uimanagement;
-    public PlayCustsceneAudio playaudio;
     
     public GameObject CreatedAreaUI;
     public GameObject ButtonLookingFor;
