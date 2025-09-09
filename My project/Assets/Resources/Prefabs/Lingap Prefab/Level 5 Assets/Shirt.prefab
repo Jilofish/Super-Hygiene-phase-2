@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6272371134716264026}
   - component: {fileID: 406771813667614062}
   - component: {fileID: 7834457184714318626}
-  - component: {fileID: -5591588512244243399}
   m_Layer: 0
   m_Name: Shirt
   m_TagString: Untagged
@@ -76,21 +75,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-5591588512244243399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932888322363631068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c8e881ff76dc54d9317fc35ebc43db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image1: {fileID: -2154803669453310097, guid: e5e6e049505ab4e4daecf326b09bcc9e, type: 3}
-  image2: {fileID: 7725315028355022449, guid: 06e4d27e5477567418d6bf198ef7e509, type: 3}
-  image3: {fileID: -507322485532335860, guid: 6116d9f33699f554093d4b73c515f1ca, type: 3}
-  image4: {fileID: -7615902672648074654, guid: a28a61e7f13dba7498092a7fd1e0ea64, type: 3}
-  image5: {fileID: -4682248076775757853, guid: e58cbd0d127e8634bb8f16313f42e55b, type: 3}
-  swipeThreshold: 100
