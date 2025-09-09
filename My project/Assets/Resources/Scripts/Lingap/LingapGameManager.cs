@@ -20,7 +20,6 @@ public class LingapGameManager : MonoBehaviour
     public ChairMoveManager chairmanager;
     public CutsceneTransitionManager taskpoints;
     public LingapUIManagement uimanagement;
-    public PlayCustsceneAudio playaudio;
     
     public GameObject CreatedAreaUI;
     public GameObject ButtonLookingFor;
@@ -69,52 +68,53 @@ public class LingapGameManager : MonoBehaviour
         CreatedAreaUI = Instantiate(areaui, uimanagement.CanvasTransform, false);
         CreatedAreaUI.transform.SetSiblingIndex(0);
         if (CreatedAreaUI != null)
-{
-    Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
-    arealoader.taskUIContainer = CreatedAreaUI.gameObject;
-    arealoader.AreaTaskChecker = AreaTask;
-
-    Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
-
-    Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
-    Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
-    Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
-
-    Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
-
-    ButtonLookingFor = continueButtonGO.gameObject;
-    levelmanagerunlock.continueButton = continueButtonGO.gameObject;
-    levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
-    levelmanagerunlock.stars = new Transform[]
     {
-        star1GO,
-        star2GO,
-        star3GO
-    };
+        Transform AreaTask = FindChild(CreatedAreaUI.transform, "AreaTaskChecker");
+        arealoader.taskUIContainer = CreatedAreaUI.gameObject;
+        arealoader.AreaTaskChecker = AreaTask;
 
-    // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
-    AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
-    if (starSFX != null)
-    {
-        levelmanagerunlock.StarSFX = starSFX;
-    }
-    else
-    {
-        Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
-    }
+        Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
 
-    // Add onClick listener
-    Button continueButton = continueButtonGO.GetComponent<Button>();
-    if (continueButton != null)
-    {
-        continueButton.onClick.AddListener(() =>
+        Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
+        Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
+        Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");
+
+        Transform blackOverlayGO = FindChild(CreatedAreaUI.transform, "Black");
+
+        ButtonLookingFor = continueButtonGO.gameObject;
+        levelmanagerunlock.continueButton = continueButtonGO.gameObject;
+        levelmanagerunlock.blackOverlay = blackOverlayGO.gameObject;
+        levelmanagerunlock.stars = new Transform[]
         {
-            levelmanagerunlock.OnContinueButtonClicked();
-            levelmanagerunlock.DisableCurrentAreaGroup();
-            taskpoints.PlayEndingCutscene();
-        });
+            star1GO,
+            star2GO,
+            star3GO
+        };
+
+        // 🔹 Assign StarSFX (expects an AudioSource on the CreatedAreaUI or child object)
+        AudioSource starSFX = FindChild(CreatedAreaUI.transform, "StarSFX")?.GetComponent<AudioSource>();
+        if (starSFX != null)
+        {
+            levelmanagerunlock.StarSFX = starSFX;
+        }
+        else
+        {
+            Debug.LogWarning("StarSFX AudioSource not found under CreatedAreaUI!");
+        }
+
+        // Add onClick listener
+        Button continueButton = continueButtonGO.GetComponent<Button>();
+        if (continueButton != null)
+        {
+            continueButton.onClick.AddListener(() =>
+            {
+                levelmanagerunlock.OnContinueButtonClicked();
+                levelmanagerunlock.DisableCurrentAreaGroup();
+                levelmanagerunlock.UpdateLevelIndicatorUI();
+                taskpoints.PlayEndingCutscene();
+            });
+        }
     }
-}
 
 
 
@@ -135,115 +135,123 @@ public class LingapGameManager : MonoBehaviour
         });
     }
 
-        for (int h=0; h<6; h++)
-        {
-            arealoader.areaGroups[h] = Instantiate(AreaGameObjects[h]);
-            taskpoints.taskEntryPoints[h] = arealoader.areaGroups[h];
-        }
+    for (int h=0; h<6; h++)
+    {
+        arealoader.areaGroups[h] = Instantiate(AreaGameObjects[h]);
+        taskpoints.taskEntryPoints[h] = arealoader.areaGroups[h];
+    }
 
-        if (chairmanager.chair == null)
-        {
-            GameObject chairGo=arealoader.areaGroups[1];
-            Transform ChairOntableTransform = FindChild(chairGo.transform,"Chair in Table");
-            chairmanager.chair= ChairOntableTransform.gameObject;
-            Transform TableTransform = FindChild(chairGo.transform,"Table");
-            chairmanager.table= TableTransform.gameObject;
-            Transform ChairTransform = FindChild(chairGo.transform,"Chair");
-            ChairMove ChairmoveComp = ChairTransform.GetComponent<ChairMove>();
-            if(ChairmoveComp != null){
+    if (chairmanager.chair == null)
+    {
+        GameObject chairGo=arealoader.areaGroups[1];
+        Transform ChairOntableTransform = FindChild(chairGo.transform,"Chair in Table");
+        chairmanager.chair= ChairOntableTransform.gameObject;
+        Transform TableTransform = FindChild(chairGo.transform,"Table");
+        chairmanager.table= TableTransform.gameObject;
+        Transform ChairTransform = FindChild(chairGo.transform,"Chair");
+        ChairMove ChairmoveComp = ChairTransform.GetComponent<ChairMove>();
+        
+        if (ChairmoveComp != null)
+            {
                 ChairmoveComp.chairMoveManager = GetComponent<ChairMoveManager>();
             }
-        }
+    }
         
-        Button ButtonMG1 = Instantiate(ProceedButtonMG1,uimanagement.CanvasTransform,false);
-        GameObject FaucetMini1 = Instantiate(FaucetMinigame1);
-        FaucetMinigame1 = FaucetMini1;
-        if (FaucetMini1 != null)
+    Button ButtonMG1 = Instantiate(ProceedButtonMG1,uimanagement.CanvasTransform,false);
+    GameObject FaucetMini1 = Instantiate(FaucetMinigame1);
+    FaucetMinigame1 = FaucetMini1;
+    if (FaucetMini1 != null)
+    {
+        AreaGroup3 = arealoader.areaGroups[2];
+        Transform FM1 = FindChild(AreaGroup3.transform,"Faucet");
+        GameObject FM1Ref= FM1.gameObject;
+        Transform FH1 = FindChild(FaucetMini1.transform,"Faucet Handle");
+        GameObject FH1Ref= FH1.gameObject;
+        FaucetHandleManager FHM1 = FM1Ref.GetComponent<FaucetHandleManager>();
+        FHM1.faucetMinigame = FaucetMini1;
+        FHM1.AreaUI = CreatedAreaUI;
+        FHM1.proceedButton = ButtonMG1;
+        FHM1.FaucetHandle = FH1Ref.GetComponent<FaucetHandleController>();
+        FaucetHandleController FHC1 = FHM1.FaucetHandle;
+        FHC1.proceedButton = ButtonMG1.gameObject;
+        ButtonMG1.onClick.AddListener(() =>
         {
-            AreaGroup3 = arealoader.areaGroups[2];
-            Transform FM1 = FindChild(AreaGroup3.transform,"Faucet");
-            GameObject FM1Ref= FM1.gameObject;
-            Transform FH1 = FindChild(FaucetMini1.transform,"Faucet Handle");
-            GameObject FH1Ref= FH1.gameObject;
-            FaucetHandleManager FHM1 = FM1Ref.GetComponent<FaucetHandleManager>();
-            FHM1.faucetMinigame = FaucetMini1;
-            FHM1.AreaUI = CreatedAreaUI;
-            FHM1.proceedButton = ButtonMG1;
-            FHM1.FaucetHandle = FH1Ref.GetComponent<FaucetHandleController>();
-            FaucetHandleController FHC1 = FHM1.FaucetHandle;
-            FHC1.proceedButton = ButtonMG1.gameObject;
-            ButtonMG1.onClick.AddListener(() =>
-            {
-                CreatedAreaUI.SetActive(true);
-                AreaGroup3.SetActive(true);
-                FaucetMinigame1.SetActive(false);
-                ButtonMG1.gameObject.SetActive(false);
-            });
-            if (FHM1.FaucetHandle != null)
-            {
-                ButtonMG1.onClick.AddListener(FHM1.FaucetHandle.OnProceedPressed);
-            }
-            else
-            {
-                Debug.LogError("FaucetHandleController is NULL! Check if"+ FH1Ref.name +  "has the component attached.");
-            }
+            CreatedAreaUI.SetActive(true);
+            AreaGroup3.SetActive(true);
+            FaucetMinigame1.SetActive(false);
+            ButtonMG1.gameObject.SetActive(false);
+        });
+        if (FHM1.FaucetHandle != null)
+        {
+            ButtonMG1.onClick.AddListener(FHM1.FaucetHandle.OnProceedPressed);
         }
+        else
+        {
+            Debug.LogError("FaucetHandleController is NULL! Check if"+ FH1Ref.name +  "has the component attached.");
+        }
+    }
         
-        Button ButtonMG2 = Instantiate(ProceedButtonMG2,uimanagement.CanvasTransform,false);
-        GameObject FaucetMini2 = Instantiate(FaucetMinigame2);
-        FaucetMinigame2 = FaucetMini2;
-        if (FaucetMini2 != null)
+    Button ButtonMG2 = Instantiate(ProceedButtonMG2,uimanagement.CanvasTransform,false);
+    GameObject FaucetMini2 = Instantiate(FaucetMinigame2);
+    FaucetMinigame2 = FaucetMini2;
+    if (FaucetMini2 != null)
+    {
+        AreaGroup4 = arealoader.areaGroups[3];
+        Transform FM2 = FindChild(AreaGroup4.transform,"Faucet");
+        GameObject FM2Ref= FM2.gameObject;
+        Transform FH2 = FindChild(FaucetMini2.transform,"Faucet Handle");
+        GameObject FH2Ref= FH2.gameObject;
+        FaucetHandleManager FHM2 = FM2Ref.GetComponent<FaucetHandleManager>();
+        FHM2.faucetMinigame = FaucetMini2;
+        FHM2.AreaUI = CreatedAreaUI;
+        FHM2.proceedButton = ButtonMG2;
+        FHM2.FaucetHandle = FH2Ref.GetComponent<FaucetHandleController>();
+        FaucetHandleController FHC2= FHM2.FaucetHandle;
+        FHC2.proceedButton = ButtonMG2.gameObject;
+        ButtonMG2.onClick.AddListener(() =>
         {
-            AreaGroup4 = arealoader.areaGroups[3];
-            Transform FM2 = FindChild(AreaGroup4.transform,"Faucet");
-            GameObject FM2Ref= FM2.gameObject;
-            Transform FH2 = FindChild(FaucetMini2.transform,"Faucet Handle");
-            GameObject FH2Ref= FH2.gameObject;
-            FaucetHandleManager FHM2 = FM2Ref.GetComponent<FaucetHandleManager>();
-            FHM2.faucetMinigame = FaucetMini2;
-            FHM2.AreaUI = CreatedAreaUI;
-            FHM2.proceedButton = ButtonMG2;
-            FHM2.FaucetHandle = FH2Ref.GetComponent<FaucetHandleController>();
-            FaucetHandleController FHC2= FHM2.FaucetHandle;
-            FHC2.proceedButton = ButtonMG2.gameObject;
-            ButtonMG2.onClick.AddListener(() =>
-            {
-                CreatedAreaUI.SetActive(true);
-                AreaGroup4.SetActive(true);
-                FaucetMinigame2.SetActive(false);
-                ButtonMG2.gameObject.SetActive(false);
-            });
-            if (FHM2.FaucetHandle != null)
-            {
-                ButtonMG2.onClick.AddListener(FHM2.FaucetHandle.OnProceedPressed);
-            }
-            else
-            {
-                Debug.LogError("FaucetHandleController is NULL! Check if"+ FH2Ref.name +  "has the component attached.");
-            }
-        }
-
-        GameObject ShirtSpawnInt = Instantiate(ShirtSpawn, uimanagement.CanvasTransform,false);
-        if (ShirtSpawnInt != null)
+            CreatedAreaUI.SetActive(true);
+            AreaGroup4.SetActive(true);
+            FaucetMinigame2.SetActive(false);
+            ButtonMG2.gameObject.SetActive(false);
+        });
+        if (FHM2.FaucetHandle != null)
         {
-            AreaGroup5 = arealoader.areaGroups[4];
-            Transform ClothesPile = FindChild(AreaGroup5.transform,"Clothes Pile");
-            GameObject ClothesPileRef= ClothesPile.gameObject;
-            ShirtFoldManager SFM = ClothesPileRef.GetComponent<ShirtFoldManager>();
-            SFM.ShirtSpawn = ShirtSpawnInt;
-            Transform ProceedButtonShirts = FindChild(ShirtSpawnInt.transform,"Proceed");
-            Button ProceedButtonFolding = ProceedButtonShirts.gameObject.GetComponent<Button>();
-            ProceedButtonFolding.onClick.AddListener(() =>
-            {
-                AreaGroup5.SetActive(true);
-                ShirtSpawnInt.SetActive(true);
-            });
-            ProceedButtonFolding.onClick.AddListener(SFM.FoldingComplete);
-
-            Transform ShirtSpawner = FindChild(ShirtSpawnInt.transform,"Shirt Spawner");
-            LingapShirtSpawner Lingap = ShirtSpawner.gameObject.GetComponent<LingapShirtSpawner>();
-            Lingap.ResetShirtStack();
+            ButtonMG2.onClick.AddListener(FHM2.FaucetHandle.OnProceedPressed);
         }
+        else
+        {
+            Debug.LogError("FaucetHandleController is NULL! Check if"+ FH2Ref.name +  "has the component attached.");
+        }
+    }
+
+    GameObject ShirtSpawnInt = Instantiate(ShirtSpawn, uimanagement.CanvasTransform,false);
+    if (ShirtSpawnInt != null)
+    {
+        AreaGroup5 = arealoader.areaGroups[4];
+        Transform ClothesPile = FindChild(AreaGroup5.transform,"Clothes Pile");
+        GameObject ClothesPileRef= ClothesPile.gameObject;
+        ShirtFoldManager SFM = ClothesPileRef.GetComponent<ShirtFoldManager>();
+        SFM.ShirtSpawn = ShirtSpawnInt;
+        Transform ProceedButtonShirts = FindChild(ShirtSpawnInt.transform,"Proceed");
+        Button ProceedButtonFolding = ProceedButtonShirts.gameObject.GetComponent<Button>();
+        ProceedButtonFolding.onClick.AddListener(() =>
+        {
+            AreaGroup5.SetActive(true);
+            ShirtSpawnInt.SetActive(true);
+        });
+        Transform CloseFoldingGame = FindChild(ShirtSpawnInt.transform,"CloseButton");
+        Button CloseFoldingGameButton = CloseFoldingGame.gameObject.GetComponent<Button>();
+        CloseFoldingGameButton.onClick.AddListener(() =>
+        {
+            AreaGroup5.SetActive(true);
+        });
+        ProceedButtonFolding.onClick.AddListener(SFM.FoldingComplete);
+
+        Transform ShirtSpawner = FindChild(ShirtSpawnInt.transform,"Shirt Spawner");
+        LingapShirtSpawner Lingap = ShirtSpawner.gameObject.GetComponent<LingapShirtSpawner>();
+        Lingap.ResetShirtStack();
+    }
 
     }
 

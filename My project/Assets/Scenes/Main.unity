@@ -1577,7 +1577,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 5a101c981bc21bb4b858d2f725144214, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 873674139}
-    audioClip: {fileID: 8300000, guid: 81d8bfc2ba691094f8695249f21c6362, type: 3}
+    audioClip: {fileID: 8300000, guid: a33e33455a42b9343af9aec0e9281807, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 940057797}
     audioClip: {fileID: 8300000, guid: 82b1d19b1e14ea54c93944fd073dcdba, type: 3}
@@ -1589,21 +1589,21 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 20a00a5562d2ff24da40a080ff6cfb3a, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 1109828929}
-    audioClip: {fileID: 8300000, guid: c7c97362062b12a489f5ff212b119cbc, type: 3}
+    audioClip: {fileID: 8300000, guid: 865bf14c095a9b246922962c29e04132, type: 3}
     hasPlayed: 0
-  - targetObject: {fileID: 1884045015018916063}
+  - targetObject: {fileID: 290424644}
     audioClip: {fileID: 8300000, guid: db399bf271282f244a6800805803d9a0, type: 3}
     hasPlayed: 0
-  - targetObject: {fileID: 3912976359073490265}
+  - targetObject: {fileID: 1608090181}
     audioClip: {fileID: 8300000, guid: 803ee34139639df469c7fda6a425d164, type: 3}
     hasPlayed: 0
-  - targetObject: {fileID: 7577605079705668323}
+  - targetObject: {fileID: 1880896798}
     audioClip: {fileID: 8300000, guid: 62290c02deb0a254fb91096e37db702f, type: 3}
     hasPlayed: 0
-  - targetObject: {fileID: 6037171082016525823}
+  - targetObject: {fileID: 1026632451}
     audioClip: {fileID: 8300000, guid: 4ee607ba8bcafce438035d54a781db17, type: 3}
     hasPlayed: 0
-  - targetObject: {fileID: 3769026859186589132}
+  - targetObject: {fileID: 132720188}
     audioClip: {fileID: 8300000, guid: 276ff014fd8db5448a441bf714491652, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 934891548}
@@ -16663,6 +16663,7 @@ MonoBehaviour:
   stars: []
   starDelay: 0.5
   popTime: 0.3
+  StarSFX: {fileID: 0}
   unlockedLevelIndex: 0
   CurrentLevel: 0
 --- !u!114 &1755220470
@@ -16734,7 +16735,6 @@ MonoBehaviour:
   chairmanager: {fileID: 1755220470}
   taskpoints: {fileID: 32443900}
   uimanagement: {fileID: 1755220472}
-  playaudio: {fileID: 154388705}
   CreatedAreaUI: {fileID: 0}
   ButtonLookingFor: {fileID: 0}
   AreaGroup3: {fileID: 0}
