@@ -20,6 +20,3 @@ MonoBehaviour:
   - taskID: clean_garbage
     description: Itapon ang basura sa tamang lagayan
     goalCount: 1
-  - taskID: pick_toys
-    description: Ayusin ang laruan
-    goalCount: 1

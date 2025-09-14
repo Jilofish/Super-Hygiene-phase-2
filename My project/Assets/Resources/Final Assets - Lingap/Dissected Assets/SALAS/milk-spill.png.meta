@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      milk-spill_0: 4555752972229647575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

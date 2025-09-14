@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 4880553883447947239}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.4015, y: 0.9028, z: 0}
+  m_LocalPosition: {x: -5.74, y: 1.33, z: 0}
   m_LocalScale: {x: 0.056405958, y: 0.053246193, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -464,8 +464,8 @@ Transform:
   m_GameObject: {fileID: 9147710721124460164}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1242, y: 1.3447, z: 0.032653}
-  m_LocalScale: {x: 1.0182617, y: 0.8262672, z: 0.42548}
+  m_LocalPosition: {x: -2.2289, y: 1.3447, z: 0.032653}
+  m_LocalScale: {x: 0.82652795, y: 0.8262672, z: 0.42548}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5144296480474266697}
@@ -669,6 +669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building Blocks
       objectReference: {fileID: 0}
+    - target: {fileID: 8859694413215187774, guid: 8daf05e7571e6c8459fff8bc45ba8927, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -687,6 +691,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5144296480474266697}
     m_Modifications:
+    - target: {fileID: 2298863769907676053, guid: 57096a5c50262ff4eaea6bd3697363ee, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6300180564922219792, guid: 57096a5c50262ff4eaea6bd3697363ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.93
@@ -1000,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 4964896791234974596, guid: 21de24127aab9d945989909397d1a9a6, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485423225110495224, guid: 21de24127aab9d945989909397d1a9a6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
