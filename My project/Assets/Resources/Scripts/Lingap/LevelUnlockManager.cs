@@ -7,6 +7,7 @@ public class LevelUnlockManager : MonoBehaviour
 {
     [Header("Level Buttons (in order)")]
     [SerializeField] public Button[] levelButtons;
+    [SerializeField] public SFXPlayer AnswerSFX;
     [Header("Level Selector UI")]
     [SerializeField] public Image[] arrowImages; // drag arrow images in Inspector
     [SerializeField] public TMP_Text DialogText;
@@ -17,6 +18,7 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] private AreaLoader areaLoader;
 
     [Header("Continue Button")]
+    public GameObject[] ToggleStartSceneButton;
     [SerializeField] public GameObject continueButton;
 
     [Header("Black Overlay")]
@@ -60,6 +62,7 @@ public class LevelUnlockManager : MonoBehaviour
         {
             StartCoroutine(ShakeButton(levelButtons[index].GetComponent<RectTransform>()));
             Debug.LogWarning($"⚠️ Level {index + 1} is locked.");
+            AnswerSFX.PlayWrong();
             return;
         }
         else if (index == unlockedLevelIndex)
@@ -68,7 +71,9 @@ public class LevelUnlockManager : MonoBehaviour
             LevelSelector.SetActive(false);
             cutsceneTransitionManager.OnLevelSelected(index);
             cutsceneTransitionManager.OpenCutsceneObjects(index);
+            areaLoader.LoadArea(6);
             areaLoader.taskUIContainer.SetActive(true);
+            AnswerSFX.PlayCorrect();
             DisableCurrentAreaGroup();
         }
         else
@@ -109,6 +114,8 @@ public class LevelUnlockManager : MonoBehaviour
 
             // Show Continue Button
             continueButton.SetActive(true);
+           
+            ToggleStartSceneButton[CurrentLevel - 1].SetActive(false);
 
             // Show Black Overlay
             if (blackOverlay != null)
@@ -159,11 +166,14 @@ public class LevelUnlockManager : MonoBehaviour
 
     public void OnContinueButtonClicked()
     {
+        StopAllCoroutines();
         // 🔹 Hide stars for reuse in the next level
         foreach (var star in stars)
         {
             if (star != null)
+            {
                 star.localScale = Vector3.zero;
+            }
         }
 
         // 🔹 Clear task UI (your existing method)

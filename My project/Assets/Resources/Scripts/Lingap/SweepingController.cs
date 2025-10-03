@@ -8,10 +8,10 @@ public class SweepingController : MonoBehaviour
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = 0.5f;   // 👈 gives trash a downward pull
-        rb.mass = 1.5f;           // heavier so it doesn’t scatter
-        rb.linearDamping = 2f;             // slows down sideways movement
-        rb.angularDamping = 5f;
+        rb.gravityScale = 1f;             // normal gravity so it sits on the invisible floor
+        rb.mass = 1.5f;                   // not too light, not too heavy
+        rb.linearDamping = 1.5f;     // adds sliding resistance after broom pushes
+        rb.angularDamping = 5f;           // stops spinning
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         gameObject.tag = "Trash";

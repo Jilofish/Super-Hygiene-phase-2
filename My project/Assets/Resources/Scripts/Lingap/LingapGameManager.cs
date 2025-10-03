@@ -74,7 +74,8 @@ public class LingapGameManager : MonoBehaviour
         arealoader.AreaTaskChecker = AreaTask;
 
         Transform continueButtonGO = FindChild(CreatedAreaUI.transform, "Proceed Button");
-
+        Transform AnswerSFX = FindChild(CreatedAreaUI.transform, "AnswerSFX");
+        Transform starContainer = FindChild(CreatedAreaUI.transform, "SuccessStars");
         Transform star1GO = FindChild(CreatedAreaUI.transform, "Star-1");
         Transform star2GO = FindChild(CreatedAreaUI.transform, "Star-2");
         Transform star3GO = FindChild(CreatedAreaUI.transform, "Star-3");

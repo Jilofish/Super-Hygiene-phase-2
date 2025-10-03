@@ -46,7 +46,7 @@ public class BroomController : MonoBehaviour
         }
 
         // Touch input
-        if (Touchscreen.current != null)
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
         {
             var touch = Touchscreen.current.primaryTouch;
             Vector2 touchWorld = cam.ScreenToWorldPoint(touch.position.ReadValue());
@@ -72,17 +72,22 @@ public class BroomController : MonoBehaviour
     {
         if (isDragging)
         {
-            // Follow input
-            Vector2 inputPos = Mouse.current != null && Mouse.current.leftButton.isPressed
-                ? cam.ScreenToWorldPoint(Mouse.current.position.ReadValue())
-                : cam.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue());
+            Vector2 inputPos = rb.position; 
+
+            if (Mouse.current != null && Mouse.current.leftButton != null && Mouse.current.leftButton.isPressed)
+            {
+                inputPos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            }
+            else if (Touchscreen.current != null && Touchscreen.current.primaryTouch != null && Touchscreen.current.primaryTouch.press.isPressed)
+            {
+                inputPos = cam.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue());
+            }
 
             rb.MovePosition(inputPos + dragOffset);
         }
         else
         {
-            // Smooth return to start position
-            rb.MovePosition(Vector2.Lerp(transform.position, startPos, returnSpeed * Time.fixedDeltaTime));
+            rb.MovePosition(Vector2.Lerp(rb.position, startPos, returnSpeed * Time.fixedDeltaTime));
         }
     }
 }
