@@ -71,7 +71,7 @@ public class LevelUnlockManager : MonoBehaviour
             LevelSelector.SetActive(false);
             cutsceneTransitionManager.OnLevelSelected(index);
             cutsceneTransitionManager.OpenCutsceneObjects(index);
-            areaLoader.LoadArea(6);
+            areaLoader.LoadArea(index);
             areaLoader.taskUIContainer.SetActive(true);
             AnswerSFX.PlayCorrect();
             DisableCurrentAreaGroup();
