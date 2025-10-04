@@ -89,6 +89,7 @@ public class CutsceneTransitionManager : MonoBehaviour
     public void LoadNextLevelCutscene()
     {
         int nextLevel = currentLevelIndex + 1;
+        taskEntryPoints[currentLevelIndex].SetActive(false);
 
         ClearEndingCutscene();
         endingCutscenePanel.SetActive(false);
