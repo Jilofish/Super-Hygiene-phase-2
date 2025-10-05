@@ -1961,7 +1961,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 9f628e031e9319544927bc3388cb2d12, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 873674139}
-    audioClip: {fileID: 8300000, guid: 7569109920a50cb46a85858b64eb9c68, type: 3}
+    audioClip: {fileID: 8300000, guid: 99727dd2d6f7b9e4c8f75492c165f7ca, type: 3}
     hasPlayed: 0
   - targetObject: {fileID: 940057797}
     audioClip: {fileID: 8300000, guid: dc18e5aa7ca4f80419bbb5c9b040be8d, type: 3}
@@ -19458,7 +19458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.097132206, y: 1}
-  m_AnchoredPosition: {x: 4.01001, y: -89.37805}
+  m_AnchoredPosition: {x: 4.01001, y: -89.37802}
   m_SizeDelta: {x: 8.01001, y: -178.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649769633
